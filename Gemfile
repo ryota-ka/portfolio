@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'haml-rails'
 gem 'dotenv-rails'
+gem 'carrierwave'
 
 group :development do
   gem 'better_errors'
