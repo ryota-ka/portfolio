@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230233033) do
+ActiveRecord::Schema.define(version: 20141230234250) do
 
   create_table "awards", force: :cascade do |t|
     t.string   "award",      limit: 255, null: false
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20141230233033) do
   end
 
   add_index "awards", ["date"], name: "index_awards_on_date", using: :btree
+
+  create_table "links", force: :cascade do |t|
+    t.string   "title",      limit: 255, null: false
+    t.string   "url",        limit: 255, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "name",        limit: 255, null: false
