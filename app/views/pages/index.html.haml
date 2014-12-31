@@ -1,0 +1,43 @@
+- content_for :title, 'Ryota Kameoka'
+
+%h1= 'Ryota Kameoka'
+
+%section.profile.col-lg-4.col-sm-6
+  %h2= 'profile'
+  %dl
+    - @profiles.each do |key, value|
+      %dt= key
+      %dd= value
+
+%section.skills.col-lg-3.col-sm-6
+  %h2= 'skills'
+  %ul
+    - @skills.each do |skill|
+      %li= skill
+
+%section.awards.col-lg-5.col-sm-6
+  %h2= 'awards'
+  %ul
+    - @awards.each do |award|
+      %li
+        %span.green= award.award
+        = award.title
+        %span.gray= award.date.strftime('(%Y.%m)')
+
+%section.links.col-lg-4.col-sm-6
+  %h2= 'links'
+  %ul
+    - @links.each do |link|
+      %li= link_to link.title, link.url
+
+%hr
+
+%h2= 'Products'
+
+%section.products
+  - @products.each do |product|
+    = link_to product.url, class: 'product col-lg-3 col-md-4 col-sm-4' do
+      .inner-box
+        = image_tag product.image, class: :eyecatch
+        %h3.name= product.name
+        %p.description= product.description
