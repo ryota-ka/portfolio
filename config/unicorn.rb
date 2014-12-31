@@ -7,9 +7,8 @@ preload_app true
 
 timeout 30
 
-listen '/tmp/unicorn_stay.sock', backlog: 64
-
-pid '/tmp/unicorn_stay.pid'
+listen "#{app_path}/tmp/sockets/unicorn.sock", backlog: 64
+pid "#{app_path}/tmp/pids/unicorn.pid"
 
 stderr_path "#{app_path}/log/unicorn.stderr.log"
 stdout_path "#{app_path}/log/unicorn.stdout.log"
