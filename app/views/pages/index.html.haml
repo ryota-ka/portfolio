@@ -16,9 +16,13 @@
 
       $('nav').find('a').on 'click', (e) ->
         e.preventDefault()
+        target = $(@).attr('href')
+        $('html, body').animate({ scrollTop: $(target).offset().top }, 500)
+
+      # $('body').scrollspy(target: 'nav')
 
 .page
-  %h1#top= 'Ryota Kameoka'
+  %h1= 'Ryota Kameoka'
 
   %section#profile
     %h2= 'profile'
@@ -60,7 +64,7 @@
           %p.description= product.description
 
 %nav
-  %ul
+  %ul.navigation
     %li#datetime.datetime
       = Time.now.strftime('[%Y-%m-%d %H:%M]')
       - ['top', 'profile', 'skills', 'awards', 'links', 'products'].each.with_index(1) do |section, i|
