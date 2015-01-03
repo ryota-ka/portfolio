@@ -1,43 +1,69 @@
 - content_for :title, 'Ryota Kameoka'
+- content_for :javascript do
+  :coffee
+    $ ->
+      pad = (n) -> if n < 10 then '0' + n else n
 
-%h1= 'Ryota Kameoka'
+      setTimeout ->
+        d = new Date()
+        yy = d.getFullYear()
+        mm = pad d.getMonth() + 1
+        dd = pad d.getDate()
+        h = pad d.getHours()
+        m = pad d.getMinutes()
+        $('#datetime').text(['[', yy, '-', mm, '-', dd, ' ', h, ':', m, ']'].join(''))
+      , 15000
 
-%section.profile.col-lg-4.col-sm-6
-  %h2= 'profile'
-  %dl
-    - @profiles.each do |key, value|
-      %dt= key
-      %dd= value
+      $('nav').find('a').on 'click', (e) ->
+        e.preventDefault()
 
-%section.skills.col-lg-3.col-sm-6
-  %h2= 'skills'
+.page
+  %h1#top= 'Ryota Kameoka'
+
+  %section#profile
+    %h2= 'profile'
+    %dl
+      - @profiles.each do |key, value|
+        %dt= key
+        %dd= value
+
+  %section#skills
+    %h2= 'skills'
+    %ul
+      - @skills.each do |skill|
+        %li= skill.name
+
+  %section#awards
+    %h2= 'awards'
+    %ul
+      - @awards.each do |award|
+        %li
+          %span.green= award.award
+          = award.title
+          %span.gray= award.date.strftime('(%Y.%m)')
+
+  %section#links
+    %h2= 'links'
+    %ul
+      - @links.each do |link|
+        %li= link_to link.title, link.url
+
+  %hr
+
+  %section#products
+    %h2= 'Products'
+    - @products.each do |product|
+      = link_to product.url, class: 'product col-lg-3 col-md-4 col-sm-4' do
+        .inner-box
+          = image_tag "/images/products/#{product.id}.png", class: :eyecatch
+          %h3.name= product.name
+          %p.description= product.description
+
+%nav
   %ul
-    - @skills.each do |skill|
-      %li= skill.name
-
-%section.awards.col-lg-5.col-sm-6
-  %h2= 'awards'
-  %ul
-    - @awards.each do |award|
-      %li
-        %span.green= award.award
-        = award.title
-        %span.gray= award.date.strftime('(%Y.%m)')
-
-%section.links.col-lg-4.col-sm-6
-  %h2= 'links'
-  %ul
-    - @links.each do |link|
-      %li= link_to link.title, link.url
-
-%hr
-
-%h2= 'Products'
-
-%section.products
-  - @products.each do |product|
-    = link_to product.url, class: 'product col-lg-3 col-md-4 col-sm-4' do
-      .inner-box
-        = image_tag product.image, class: :eyecatch
-        %h3.name= product.name
-        %p.description= product.description
+    %li#datetime.datetime
+      = Time.now.strftime('[%Y-%m-%d %H:%M]')
+      - ['top', 'profile', 'skills', 'awards', 'links', 'products'].each.with_index(1) do |section, i|
+        %li
+          = link_to "[#{i} #{section}]", "##{section}"
+    %li.session= '[ryota-ka.me]'

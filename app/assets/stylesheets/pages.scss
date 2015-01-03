@@ -34,7 +34,7 @@ body {
   color: $white;
   font-family: Menlo;
   background-color: #222;
-  padding: 20px 10px;
+  padding: 20px 10px 40px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -67,17 +67,19 @@ h2 {
   }
 }
 
-ul {
-  li {
-    list-style-type: none;
-    &::before {
-      content: '- ';
-      color: $gray;
+.page {
+  ul {
+    li {
+      list-style-type: none;
+      &::before {
+        content: '- ';
+        color: $gray;
+      }
     }
   }
 }
 
-.profile {
+#profile {
   padding: 10px;
 
   dl {
@@ -102,7 +104,7 @@ ul {
   }
 }
 
-.products {
+#products {
   .product {
     display: block;
     padding: 10px;
@@ -129,6 +131,47 @@ ul {
       }
       .eyecatch {
         width: 100%;
+      }
+    }
+  }
+}
+
+nav {
+  $nav-pink: #d70087;
+
+  $nav-height: 19px;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: $nav-height;
+  height: $nav-height;
+  background-color: $gray;
+  ul {
+    height: $nav-height;
+    margin: 0;
+    padding: 0;
+    li {
+      line-height: $nav-height;
+      list-style-type: none;
+      float: left;
+      padding: 0 3px;
+      a {
+        &:link, &:active, &:visited {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+      &.active, &:hover {
+        background-color: $nav-pink;
+      }
+      &.datetime {
+        background-color: $orange;
+      }
+      &.session {
+        float: right;
+        background-color: $orange;
       }
     }
   }
