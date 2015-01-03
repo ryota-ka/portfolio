@@ -31,11 +31,15 @@
         %dt= key
         %dd= value
 
+  %hr
+
   %section#skills
     %h2= 'skills'
     %ul
       - @skills.each do |skill|
         %li= skill.name
+
+  %hr
 
   %section#awards
     %h2= 'awards'
@@ -45,6 +49,8 @@
           %span.green= award.award
           = award.title
           %span.gray= award.date.strftime('(%Y.%m)')
+
+  %hr
 
   %section#links
     %h2= 'links'
