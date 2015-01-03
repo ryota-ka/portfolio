@@ -140,7 +140,8 @@ h2 {
 }
 
 nav {
-  $nav-pink: #d70087;
+  $nav-orange: #ff8a40;
+  $nav-pink: #f740b0;
 
   $nav-height: 19px;
 
@@ -170,11 +171,11 @@ nav {
         background-color: $nav-pink;
       }
       &.datetime {
-        background-color: $orange;
+        background-color: $nav-orange;
       }
       &.session {
         float: right;
-        background-color: $orange;
+        background-color: $nav-orange;
       }
     }
   }
