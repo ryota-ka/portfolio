@@ -19,7 +19,8 @@
         target = $(@).attr('href')
         $('html, body').animate({ scrollTop: $(target).offset().top }, 500)
 
-      $('#products-wrapper').equalize()
+      $productsWrapper = $('#products-wrapper')
+      $productsWrapper.equalize()
 
 .page
   %h1= 'Ryota Kameoka'
@@ -70,7 +71,7 @@
             %h3.name= product.name
             %p.description= product.description
 
-%nav.hiddne-xs.hidden-sm
+%nav.hidden-xs
   %ul.navigation
     %li#datetime.datetime
       = Time.now.strftime('[%Y-%m-%d %H:%M]')
