@@ -110,7 +110,18 @@ h2 {
 #products {
   .product {
     display: block;
+    margin: 10px;
     padding: 10px;
+    border: {
+      style: solid;
+      width: 1px;
+      color: $gray;
+    }
+    transition: background-color linear .1s;
+
+    &:hover {
+      background-color: rgba(64, 64, 64, 0.5);
+    }
 
     &:hover, &:link, &:active, &:visited {
       color: $white;
@@ -122,16 +133,6 @@ h2 {
     }
 
     .inner-box {
-      padding: 10px;
-      border: {
-        style: solid;
-        width: 1px;
-        color: $gray;
-      }
-      transition: background-color linear .1s;
-      &:hover {
-        background-color: rgba(64, 64, 64, 0.5);
-      }
       .eyecatch {
         width: 100%;
       }
