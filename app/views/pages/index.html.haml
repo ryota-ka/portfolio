@@ -28,9 +28,18 @@
   %section#profile
     %h2= 'profile'
     %dl
-      - @profiles.each do |key, value|
-        %dt= key
-        %dd= value
+      %dt= 'birthday'
+      %dd= "Jun 7, 1993 (age #@age)"
+      %dt= 'location'
+      %dd= 'Sakyo, Kyoto, Japan'
+      %dt= 'hometown'
+      %dd= 'Kishiwada, Osaka, Japan'
+      %dt= 'education'
+      %dd= link_to 'Faculty of Economics, Kyoto University', 'http://www.econ.kyoto-u.ac.jp/'
+      %dt= 'company'
+      %dd= link_to 'Lovegraph Inc.', 'http://lovegraph.me/company/'
+      %dt= 'community'
+      %dd= link_to 'CAMPHOR-', 'https://camph.net/'
 
   %hr
 
