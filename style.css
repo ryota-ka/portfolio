@@ -23,36 +23,31 @@ body {
   padding: 20px 10px 40px;
   -webkit-text-size-adjust: 100%; }
 
-hr {
+main hr {
   width: 100%;
   height: 1px;
   margin: 40px 0;
   background-color: #808080;
   border-style: none; }
-
-a {
+main a {
   color: #66d9ef; }
-  a:hover, a:link, a:active, a:visited {
+  main a:hover, main a:link, main a:active, main a:visited {
     color: #66d9ef; }
-
-h1 {
+main h1 {
   color: #ffffff;
   margin-bottom: 40px; }
-
-h2 {
+main h2 {
   color: #F92672;
   font-size: 18px; }
-  h2::before {
+  main h2::before {
     content: "# "; }
-  h2::after {
+  main h2::after {
     content: ":"; }
-
-section {
+main section {
   padding: 0 20px; }
-
-ul li {
+main ul li {
   list-style-type: none; }
-  ul li::before {
+  main ul li::before {
     content: '- ';
     color: #808080; }
 

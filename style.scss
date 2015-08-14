@@ -55,46 +55,49 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-hr {
-  width: 100%;
-  height: 1px;
-  margin: 40px 0;
-  background-color: $gray;
-  border-style: none;
-}
+main {
+  hr {
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+    background-color: $gray;
+    border-style: none;
+  }
 
-a {
-  color: $blue;
-  &:hover, &:link, &:active, &:visited {
+  a {
     color: $blue;
+    &:hover, &:link, &:active, &:visited {
+      color: $blue;
+    }
   }
-}
 
-h1 {
-  color: $white;
-  margin-bottom: 40px;
-}
-
-h2 {
-  color: $red;
-  font-size: 18px;
-  &::before {
-    content: '# '
+  h1 {
+    color: $white;
+    margin-bottom: 40px;
   }
-  &::after {
-    content: ':'
-  }
-}
 
-section {
-  padding: 0 20px;
-}
-ul {
-  li {
-    list-style-type: none;
+  h2 {
+    color: $red;
+    font-size: 18px;
     &::before {
-      content: '- ';
-      color: $gray;
+      content: '# '
+    }
+    &::after {
+      content: ':'
+    }
+  }
+
+  section {
+    padding: 0 20px;
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+      &::before {
+        content: '- ';
+        color: $gray;
+      }
     }
   }
 }
