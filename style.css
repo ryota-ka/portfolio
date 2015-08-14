@@ -109,9 +109,13 @@ main ul li {
       #status-bar ul li a:link, #status-bar ul li a:active, #status-bar ul li a:visited {
         color: #dddddd;
         text-decoration: none; }
-      #status-bar ul li.active a:link, #status-bar ul li.active a:active, #status-bar ul li.active a:visited, #status-bar ul li:hover a:link, #status-bar ul li:hover a:active, #status-bar ul li:hover a:visited {
-        color: #26c45f;
-        text-decoration: none; }
+      #status-bar ul li.active, #status-bar ul li:hover {
+        color: #26c45f; }
+        #status-bar ul li.active a:link, #status-bar ul li.active a:active, #status-bar ul li.active a:visited, #status-bar ul li:hover a:link, #status-bar ul li:hover a:active, #status-bar ul li:hover a:visited {
+          color: #26c45f;
+          text-decoration: none; }
+        #status-bar ul li.active::after, #status-bar ul li:hover::after {
+          content: "*"; }
       #status-bar ul li.datetime {
         color: #f67d1b; }
       #status-bar ul li.window {

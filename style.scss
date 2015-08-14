@@ -191,11 +191,15 @@ main {
         }
       }
       &.active, &:hover {
+        color: $ansi-green;
         a {
           &:link, &:active, &:visited {
             color: $ansi-green;
             text-decoration: none;
           }
+        }
+        &::after {
+          content: '*'
         }
       }
       &.datetime {
