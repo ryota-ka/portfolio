@@ -91,6 +91,8 @@ ul li {
       background-color: rgba(64, 64, 64, 0.5); }
     #products .product .inner-box .eyecatch {
       width: 100%; }
+    #products .product .inner-box .description {
+      min-height: 80px; }
 
 nav {
   position: fixed;
