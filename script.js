@@ -37,3 +37,14 @@ $(function() {
   updateDatetime();
   setInterval(updateDatetime, 15000);
 });
+
+$(window).keydown(function(e) {
+  switch (e.which) {
+    case 74: // j
+      window.scrollBy(0, 14);
+      break;
+    case 75: // k
+      window.scrollBy(0, -14);
+      break;
+  }
+});
