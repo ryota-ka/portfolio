@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#222222">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Ryota Kameoka</title>
   </head>
-  <body id="top" data-spy="scroll" data-target="nav" data-offset="0">
+  <body id="top" data-spy="scroll" data-target="#status-bar" data-offset="0">
     <h1>Ryota Kameoka</h1>
     <section id="profile">
       <h2>profile</h2>
@@ -125,8 +125,8 @@
         </a>
       </div>
     </section>
-    <nav class="hidden-xs">
-      <ul class="navigation">
+    <nav id="status-bar" class="hidden-xs">
+      <ul class="nav">
         <li id="datetime" class="datetime"></li>
         <li class="window"><a href="#top">1:top</a></li>
         <li class="window"><a href="#profile">2:profile</a></li>
@@ -147,7 +147,7 @@
       ga('send', 'pageview');
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

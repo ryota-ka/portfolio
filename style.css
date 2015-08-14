@@ -94,7 +94,7 @@ ul li {
     #products .product .inner-box .description {
       min-height: 80px; }
 
-nav {
+#status-bar {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -102,25 +102,25 @@ nav {
   font-weight: bold;
   min-height: 24px;
   height: 24px; }
-  nav ul {
+  #status-bar ul {
     background-color: #292929;
     height: 24px;
     margin: 0;
     padding: 0; }
-    nav ul li {
+    #status-bar ul li {
       line-height: 24px;
       list-style-type: none;
       float: left; }
-      nav ul li a:link, nav ul li a:active, nav ul li a:visited {
+      #status-bar ul li a:link, #status-bar ul li a:active, #status-bar ul li a:visited {
         color: #dddddd;
         text-decoration: none; }
-      nav ul li.active a:link, nav ul li.active a:active, nav ul li.active a:visited, nav ul li:hover a:link, nav ul li:hover a:active, nav ul li:hover a:visited {
+      #status-bar ul li.active a:link, #status-bar ul li.active a:active, #status-bar ul li.active a:visited, #status-bar ul li:hover a:link, #status-bar ul li:hover a:active, #status-bar ul li:hover a:visited {
         color: #26c45f;
         text-decoration: none; }
-      nav ul li.datetime {
+      #status-bar ul li.datetime {
         color: #f67d1b; }
-      nav ul li.window {
+      #status-bar ul li.window {
         padding-left: 10px; }
-      nav ul li.session {
+      #status-bar ul li.session {
         float: right;
         color: #1d62ff; }
