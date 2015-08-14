@@ -26,7 +26,7 @@ body {
 main hr {
   width: 100%;
   height: 1px;
-  margin: 40px 0;
+  margin: 0;
   background-color: #808080;
   border-style: none; }
 main a {
@@ -44,7 +44,7 @@ main h2 {
   main h2::after {
     content: ":"; }
 main section {
-  padding: 0 20px; }
+  padding: 30px 20px; }
 main ul li {
   list-style-type: none; }
   main ul li::before {
