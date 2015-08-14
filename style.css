@@ -1,0 +1,121 @@
+.red {
+  color: #F92672; }
+
+.orange {
+  color: #fd971f; }
+
+.blue {
+  color: #66d9ef; }
+
+.purple {
+  color: #ae81ff; }
+
+.green {
+  color: #a6e22e; }
+
+.gray {
+  color: #808080; }
+
+body {
+  color: #ffffff;
+  font-family: Lato, Menlo;
+  background-color: #222;
+  padding: 20px 10px 40px;
+  -webkit-text-size-adjust: 100%; }
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin: 40px 0;
+  background-color: #808080;
+  border-style: none; }
+
+a {
+  color: #66d9ef; }
+  a:hover, a:link, a:active, a:visited {
+    color: #66d9ef; }
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 40px; }
+
+h2 {
+  color: #F92672;
+  font-size: 18px; }
+  h2::before {
+    content: "# "; }
+  h2::after {
+    content: ":"; }
+
+section {
+  padding: 0 20px; }
+
+ul li {
+  list-style-type: none; }
+  ul li::before {
+    content: '- ';
+    color: #808080; }
+
+#profile dl {
+  margin-left: 2em; }
+  #profile dl dt {
+    color: #fd971f; }
+    #profile dl dt::after {
+      content: ':'; }
+  #profile dl dd {
+    color: white;
+    margin-left: 2em;
+    margin-bottom: 1em; }
+    #profile dl dd a {
+      color: #ffffff; }
+#profile img.picture {
+  width: 250px;
+  height: 250px; }
+
+#products .product {
+  display: block;
+  margin: 10px 0;
+  padding: 10px; }
+  #products .product:hover, #products .product:link, #products .product:active, #products .product:visited {
+    color: #ffffff;
+    text-decoration: none; }
+  #products .product h3 {
+    color: #ae81ff; }
+  #products .product .inner-box {
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #808080;
+    transition: background-color linear .1s; }
+    #products .product .inner-box:hover {
+      background-color: rgba(64, 64, 64, 0.5); }
+    #products .product .inner-box .eyecatch {
+      width: 100%; }
+
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 19px;
+  height: 19px;
+  background-color: #808080; }
+  nav ul {
+    height: 19px;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      line-height: 19px;
+      list-style-type: none;
+      float: left;
+      padding: 0 3px; }
+      nav ul li a:link, nav ul li a:active, nav ul li a:visited {
+        color: #ffffff;
+        text-decoration: none; }
+      nav ul li.active, nav ul li:hover {
+        background-color: #f740b0; }
+      nav ul li.datetime {
+        background-color: #ff8a40; }
+      nav ul li.session {
+        float: right;
+        background-color: #ff8a40; }

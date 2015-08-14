@@ -1,0 +1,185 @@
+$red: #F92672;
+$orange: #fd971f;
+$blue: #66d9ef;
+$purple: #ae81ff;
+$green: #a6e22e;
+$white: #ffffff;
+$gray: #808080;
+
+.red {
+  color: $red;
+}
+
+.orange {
+  color: $orange;
+}
+
+.blue {
+  color: $blue;
+}
+
+.purple {
+  color: $purple;
+}
+
+.green {
+  color: $green;
+}
+
+.gray {
+  color: $gray;
+}
+
+body {
+  color: $white;
+  font-family: Lato, Menlo;
+  background-color: #222;
+  padding: 20px 10px 40px;
+  -webkit-text-size-adjust: 100%;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin: 40px 0;
+  background-color: $gray;
+  border-style: none;
+}
+
+a {
+  color: $blue;
+  &:hover, &:link, &:active, &:visited {
+    color: $blue;
+  }
+}
+
+h1 {
+  color: $white;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: $red;
+  font-size: 18px;
+  &::before {
+    content: '# '
+  }
+  &::after {
+    content: ':'
+  }
+}
+
+section {
+  padding: 0 20px;
+}
+ul {
+  li {
+    list-style-type: none;
+    &::before {
+      content: '- ';
+      color: $gray;
+    }
+  }
+}
+
+#profile {
+  dl {
+    margin-left: 2em;
+    dt {
+      color: $orange;
+      &::after {
+        content: ':';
+      }
+    }
+    dd {
+      color: white;
+      margin: {
+        left: 2em;
+        bottom: 1em;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+  img.picture {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+#products {
+  .product {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+
+    &:hover, &:link, &:active, &:visited {
+      color: $white;
+      text-decoration: none;
+    }
+
+    h3 {
+      color: $purple;
+    }
+
+    .inner-box {
+      padding: 10px;
+      border: {
+        style: solid;
+        width: 1px;
+        color: $gray;
+      }
+      transition: background-color linear .1s;
+      &:hover {
+        background-color: rgba(64, 64, 64, 0.5);
+      }
+      .eyecatch {
+        width: 100%;
+      }
+    }
+  }
+}
+
+nav {
+  $nav-orange: #ff8a40;
+  $nav-pink: #f740b0;
+
+  $nav-height: 19px;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: $nav-height;
+  height: $nav-height;
+  background-color: $gray;
+  ul {
+    height: $nav-height;
+    margin: 0;
+    padding: 0;
+    li {
+      line-height: $nav-height;
+      list-style-type: none;
+      float: left;
+      padding: 0 3px;
+      a {
+        &:link, &:active, &:visited {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+      &.active, &:hover {
+        background-color: $nav-pink;
+      }
+      &.datetime {
+        background-color: $nav-orange;
+      }
+      &.session {
+        float: right;
+        background-color: $nav-orange;
+      }
+    }
+  }
+}

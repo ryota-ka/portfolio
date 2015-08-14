@@ -9,40 +9,6 @@ Session.vim
 *~
 
 
-### Rails ###
-*.rbc
-capybara-*.html
-.rspec
-/log
-/tmp
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/public/system
-/public/assets
-/public/uploads
-/coverage/
-/spec/tmp
-**.orig
-rerun.txt
-pickle-email-*.html
-
-## Environment normalisation:
-/.bundle
-/vendor/bundle
-.env
-
-# these should all be checked in to normalise the environment:
-# Gemfile.lock, .ruby-version, .ruby-gemset
-
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
-
-# if using bower-rails ignore default bower_components path bower.json files
-/vendor/assets/bower_components
-*.bowerrc
-bower.json
-
-
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -67,18 +33,6 @@ Temporary Items
 .apdisk
 
 
-### Tags ###
-# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
-TAGS
-!TAGS/
-tags
-!tags/
-gtags.files
-GTAGS
-GRTAGS
-GPATH
-cscope.files
-cscope.out
-cscope.in.out
-cscope.po.out
-
+### Sass ###
+.sass-cache/
+*.css.map
