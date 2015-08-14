@@ -18,8 +18,8 @@
 
 body {
   color: #ffffff;
-  font-family: Lato, Menlo;
-  background-color: #222;
+  font-family: Menlo;
+  background-color: #292929;
   padding: 20px 10px 40px;
   -webkit-text-size-adjust: 100%; }
 
@@ -99,25 +99,28 @@ nav {
   left: 0;
   bottom: 0;
   width: 100%;
-  min-height: 19px;
-  height: 19px;
-  background-color: #808080; }
+  font-weight: bold;
+  min-height: 24px;
+  height: 24px; }
   nav ul {
-    height: 19px;
+    background-color: #292929;
+    height: 24px;
     margin: 0;
     padding: 0; }
     nav ul li {
-      line-height: 19px;
+      line-height: 24px;
       list-style-type: none;
-      float: left;
-      padding: 0 3px; }
+      float: left; }
       nav ul li a:link, nav ul li a:active, nav ul li a:visited {
-        color: #ffffff;
+        color: #dddddd;
         text-decoration: none; }
-      nav ul li.active, nav ul li:hover {
-        background-color: #f740b0; }
+      nav ul li.active a:link, nav ul li.active a:active, nav ul li.active a:visited, nav ul li:hover a:link, nav ul li:hover a:active, nav ul li:hover a:visited {
+        color: #26c45f;
+        text-decoration: none; }
       nav ul li.datetime {
-        background-color: #ff8a40; }
+        color: #f67d1b; }
+      nav ul li.window {
+        padding-left: 10px; }
       nav ul li.session {
         float: right;
-        background-color: #ff8a40; }
+        color: #1d62ff; }

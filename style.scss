@@ -6,6 +6,23 @@ $green: #a6e22e;
 $white: #ffffff;
 $gray: #808080;
 
+$ansi-black: #292929;
+$ansi-bright-black: #646464;
+$ansi-red: #e91c16;
+$ansi-bright-red: #ff5555;
+$ansi-green: #26c45f;
+$ansi-bright-green: #67f371;
+$ansi-yellow: #f67d1b;
+$ansi-bright-yellow: #ffd604;
+$ansi-blue: #1028b5;
+$ansi-bright-blue: #1d62ff;
+$ansi-magenta: #f1386f;
+$ansi-bright-magenta: #ff5799;
+$ansi-cyan: #0089cd;
+$ansi-bright-cyan: #1ef3bd;
+$ansi-white: #dddddd;
+$ansi-bright-white: #ffffff;
+
 .red {
   color: $red;
 }
@@ -32,8 +49,8 @@ $gray: #808080;
 
 body {
   color: $white;
-  font-family: Lato, Menlo;
-  background-color: #222;
+  font-family: Menlo;
+  background-color: $ansi-black;
   padding: 20px 10px 40px;
   -webkit-text-size-adjust: 100%;
 }
@@ -146,19 +163,17 @@ ul {
 }
 
 nav {
-  $nav-orange: #ff8a40;
-  $nav-pink: #f740b0;
-
-  $nav-height: 19px;
+  $nav-height: 24px;
 
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  font-weight: bold;
   min-height: $nav-height;
   height: $nav-height;
-  background-color: $gray;
   ul {
+    background-color: $ansi-black;
     height: $nav-height;
     margin: 0;
     padding: 0;
@@ -166,22 +181,29 @@ nav {
       line-height: $nav-height;
       list-style-type: none;
       float: left;
-      padding: 0 3px;
       a {
         &:link, &:active, &:visited {
-          color: $white;
+          color: $ansi-white;
           text-decoration: none;
         }
       }
       &.active, &:hover {
-        background-color: $nav-pink;
+        a {
+          &:link, &:active, &:visited {
+            color: $ansi-green;
+            text-decoration: none;
+          }
+        }
       }
       &.datetime {
-        background-color: $nav-orange;
+        color: $ansi-yellow;
+      }
+      &.window {
+        padding-left: 10px;
       }
       &.session {
         float: right;
-        background-color: $nav-orange;
+        color: $ansi-bright-blue;
       }
     }
   }
