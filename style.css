@@ -1,86 +1,77 @@
-.red {
-  color: #F92672; }
-
-.orange {
-  color: #fd971f; }
-
-.blue {
-  color: #66d9ef; }
-
-.purple {
-  color: #ae81ff; }
-
-.green {
-  color: #a6e22e; }
-
-.gray {
-  color: #808080; }
-
 body {
-  color: #ffffff;
-  font-family: Menlo;
   background-color: #292929;
+  color: #fff;
+  font-family: Menlo;
   padding: 20px 10px 40px;
   -webkit-text-size-adjust: 100%; }
 
 main hr {
-  width: 100%;
+  background-color: #888;
+  border-style: none;
   height: 1px;
   margin: 0;
-  background-color: #808080;
-  border-style: none; }
-main a {
-  color: #66d9ef; }
-  main a:hover, main a:link, main a:active, main a:visited {
-    color: #66d9ef; }
+  width: 100%; }
+main a:link, main a:visited {
+  color: #0089cd; }
+main a:active, main a:hover {
+  color: #1ef3bd; }
 main h1 {
-  color: #ffffff;
-  margin-bottom: 40px; }
+  font-weight: bold; }
 main h2 {
-  color: #F92672;
-  font-size: 18px; }
+  color: #f1386f;
+  font-size: 1em;
+  font-weight: bold; }
   main h2::before {
-    content: "# "; }
+    content: '# '; }
   main h2::after {
-    content: ":"; }
+    content: ':'; }
 main section {
   padding: 30px 20px; }
 main ul li {
   list-style-type: none; }
   main ul li::before {
-    content: '- ';
-    color: #808080; }
+    color: #888;
+    content: '- '; }
 
 #profile dl {
   margin-left: 2em; }
   #profile dl dt {
-    color: #fd971f; }
+    color: #f67d1b; }
     #profile dl dt::after {
       content: ':'; }
   #profile dl dd {
-    color: white;
-    margin-left: 2em;
-    margin-bottom: 1em; }
+    color: #fff;
+    margin-bottom: 1em;
+    margin-left: 2em; }
     #profile dl dd a {
-      color: #ffffff; }
+      color: #fff; }
 #profile img.picture {
-  width: 250px;
-  height: 250px; }
+  font-weight: bold;
+  height: 250px;
+  width: 250px; }
+
+#awards ul li .contest {
+  color: #26c45f; }
+#awards ul li .time {
+  color: #888; }
+  #awards ul li .time::before {
+    content: "("; }
+  #awards ul li .time::after {
+    content: ")"; }
 
 #products .product {
   display: block;
-  margin: 10px 0;
   padding: 10px; }
   #products .product:hover, #products .product:link, #products .product:active, #products .product:visited {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none; }
   #products .product h3 {
-    color: #ae81ff; }
+    color: #ff5799; }
   #products .product .inner-box {
     padding: 10px;
+    border-color: #888;
     border-style: solid;
     border-width: 1px;
-    border-color: #808080;
     transition: background-color linear .1s; }
     #products .product .inner-box:hover {
       background-color: rgba(64, 64, 64, 0.5); }
@@ -90,13 +81,13 @@ main ul li {
       min-height: 80px; }
 
 #status-bar {
-  position: fixed;
-  left: 0;
   bottom: 0;
-  width: 100%;
   font-weight: bold;
+  height: 24px;
+  left: 0;
   min-height: 24px;
-  height: 24px; }
+  position: fixed;
+  width: 100%; }
   #status-bar ul {
     background-color: #292929;
     height: 24px;
@@ -107,19 +98,19 @@ main ul li {
       list-style-type: none;
       float: left; }
       #status-bar ul li a:link, #status-bar ul li a:active, #status-bar ul li a:visited {
-        color: #dddddd;
+        color: #fff;
         text-decoration: none; }
-      #status-bar ul li.active, #status-bar ul li:hover {
-        color: #26c45f; }
-        #status-bar ul li.active a:link, #status-bar ul li.active a:active, #status-bar ul li.active a:visited, #status-bar ul li:hover a:link, #status-bar ul li:hover a:active, #status-bar ul li:hover a:visited {
-          color: #26c45f;
-          text-decoration: none; }
-        #status-bar ul li.active::after, #status-bar ul li:hover::after {
-          content: "*"; }
       #status-bar ul li.datetime {
         color: #f67d1b; }
       #status-bar ul li.window {
         padding-left: 10px; }
+        #status-bar ul li.window.active {
+          color: #26c45f; }
+          #status-bar ul li.window.active a:link, #status-bar ul li.window.active a:active, #status-bar ul li.window.active a:visited {
+            color: #26c45f;
+            text-decoration: none; }
+          #status-bar ul li.window.active::after {
+            content: "*"; }
       #status-bar ul li.session {
-        float: right;
-        color: #1d62ff; }
+        color: #1d62ff;
+        float: right; }
