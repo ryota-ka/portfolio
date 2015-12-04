@@ -33,19 +33,19 @@ main ul li {
     color: #888;
     content: '- '; }
 
-#profile dl {
+#profile dl, #affiliation dl {
   margin-left: 2em; }
-  #profile dl dt {
+  #profile dl dt, #affiliation dl dt {
     color: #f67d1b; }
-    #profile dl dt::after {
+    #profile dl dt::after, #affiliation dl dt::after {
       content: ':'; }
-  #profile dl dd {
+  #profile dl dd, #affiliation dl dd {
     color: #fff;
     margin-bottom: 1em;
     margin-left: 2em; }
-    #profile dl dd a {
+    #profile dl dd a, #affiliation dl dd a {
       color: #fff; }
-#profile img.picture {
+#profile img.picture, #affiliation img.picture {
   font-weight: bold;
   height: 250px;
   width: 250px; }
