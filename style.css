@@ -61,24 +61,15 @@ main ul li {
 
 #products .product {
   display: block;
-  padding: 10px; }
-  #products .product:hover, #products .product:link, #products .product:active, #products .product:visited {
-    color: #fff;
-    text-decoration: none; }
-  #products .product h3 {
+  padding: 10px;
+  transition: background-color linear .1s; }
+  #products .product .description {
+    padding: 0 20px; }
+  #products .product h3::before {
+    color: #888;
+    content: '## '; }
+  #products .product h3 a {
     color: #ff5799; }
-  #products .product .inner-box {
-    padding: 10px;
-    border-color: #888;
-    border-style: solid;
-    border-width: 1px;
-    transition: background-color linear .1s; }
-    #products .product .inner-box:hover {
-      background-color: rgba(64, 64, 64, 0.5); }
-    #products .product .inner-box .eyecatch {
-      width: 100%; }
-    #products .product .inner-box .description {
-      min-height: 80px; }
 
 #status-bar {
   bottom: 0;

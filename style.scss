@@ -136,35 +136,21 @@ main {
   .product {
     display: block;
     padding: 10px;
+    transition: background-color linear .1s;
 
-    &:hover, &:link, &:active, &:visited {
-      color: $bright-white;
-      text-decoration: none;
+    .description {
+      padding: 0 20px;
     }
 
     h3 {
-      color: $bright-magenta;
+      &::before {
+        color: $white;
+        content: '## ';
+      }
     }
 
-    .inner-box {
-      padding: 10px;
-      border: {
-        color: $white;
-        style: solid;
-        width: 1px;
-      }
-      transition: background-color linear .1s;
-
-      &:hover {
-        background-color: rgba(64, 64, 64, 0.5);
-      }
-
-      .eyecatch {
-        width: 100%;
-      }
-      .description {
-        min-height: 80px;
-      }
+    h3 a {
+      color: $bright-magenta;
     }
   }
 }
