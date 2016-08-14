@@ -99,6 +99,11 @@ main {
         color: $bright-white;
       }
     }
+
+    .duration {
+      color: $white;
+      white-space: nowrap;
+    }
   }
 }
 

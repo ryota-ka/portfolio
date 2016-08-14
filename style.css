@@ -45,6 +45,9 @@ main ul li {
     margin-left: 2em; }
     #profile dl dd a, #affiliation dl dd a {
       color: #fff; }
+  #profile dl .duration, #affiliation dl .duration {
+    color: #888;
+    white-space: nowrap; }
 
 #awards ul li .contest {
   color: #26c45f; }
