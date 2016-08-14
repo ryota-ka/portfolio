@@ -45,10 +45,6 @@ main ul li {
     margin-left: 2em; }
     #profile dl dd a, #affiliation dl dd a {
       color: #fff; }
-#profile img.picture, #affiliation img.picture {
-  font-weight: bold;
-  height: 250px;
-  width: 250px; }
 
 #awards ul li .contest {
   color: #26c45f; }
