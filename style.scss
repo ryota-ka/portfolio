@@ -1,44 +1,100 @@
-$black: #292929;
-$bright-black: #646464;
-$red: #e91c16;
-$bright-red: #ff5555;
+$blue: #3498db;
+$gray: #888;
 $green: #26c45f;
-$bright-green: #67f371;
-$yellow: #f67d1b;
-$bright-yellow: #ffd604;
-$blue: #1028b5;
-$bright-blue: #1d62ff;
-$magenta: #f1386f;
-$bright-magenta: #ff5799;
-$cyan: #0089cd;
-$bright-cyan: #1ef3bd;
-$white: #888;
-$bright-white: #fff;
+$red: #ff535c;
+$white: #fff;
+$yellow: #ff8900;
+
+html {
+  font-size: 15px;
+  height: 100%;
+}
 
 body {
-  background-color: $black;
-  color: $bright-white;
-  font-family: Menlo;
-  padding: 20px 10px 40px;
+  background-color: $white;
+  color: #333;
+  font-family: Lato, sans-serif;
+  font-size: 1rem;
+  height: 100%;
+  letter-spacing: .02rem;
+  padding: 20px 3%;
+  position: relative;
   -webkit-text-size-adjust: 100%;
 }
 
-main {
-  hr {
-    background-color: $white;
-    border-style: none;
-    height: 1px;
-    margin: 0;
+@media screen and (min-width: 1200px) {
+  #photo {
+    background-image: url('./photo.jpg');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: -1;
   }
 
+  #overlay {
+    background-color: $white;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.label {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 0.8rem;
+  margin-left: 2px;
+  padding: 1px 3px;
+  white-space: nowrap;
+
+  &.green {
+    border-color: $green;
+    color: $green;
+  }
+
+  &.gray {
+    border-color: $gray;
+    color: $gray;
+  }
+
+  &.red {
+    border-color: $red;
+    color: $red;
+  }
+
+  &.yellow {
+    border-color: $yellow;
+    color: $yellow;
+  }
+
+  .fa {
+    margin-right: 1px;
+  }
+}
+
+main {
   a {
+    text-decoration: none;
     &:link, &:visited {
-      color: $cyan;
+      color: #3498db;
     }
 
-    &:active, &:hover {
-      color: $bright-cyan;
+    &:hover {
+      color: $green;
+      text-decoration: none;
     }
   }
 
@@ -47,41 +103,40 @@ main {
   }
 
   h2 {
-    color: $magenta;
-    font-size: 1em;
+    color: #666;
+    font-size: 1.5rem;
     font-weight: bold;
 
     &::before {
       content: '# ';
     }
+  }
 
-    &::after {
-      content: ':';
-    }
+  h3::before {
+    content: '## ';
   }
 
   section {
-    padding: 30px 20px;
+    margin-bottom: 50px;
+    padding: 5px 0;
   }
 
   ul {
+    padding-left: 2rem;
+
     li {
       list-style-type: none;
-
-      &::before {
-        color: $white;
-        content: '- ';
-      }
+      margin-bottom: 0.2rem;
     }
   }
 }
 
 #profile, #affiliation {
   dl {
-    margin-left: 2em;
+    margin-left: 1rem;
 
     dt {
-      color: $yellow;
+      margin-bottom: 0.5rem;
 
       &::after {
         content: ':';
@@ -89,125 +144,64 @@ main {
     }
 
     dd {
-      color: $bright-white;
       margin: {
-        bottom: 1em;
-        left: 2em;
-      }
-
-      a {
-        color: $bright-white;
+        bottom: 1rem;
+        left: 1rem;
       }
     }
 
     .duration {
-      color: $white;
-      white-space: nowrap;
-    }
-  }
-}
+      @extend .nowrap;
 
-#awards {
-  ul {
-    li {
-      .contest {
-        color: $green;
-      }
-
-      .title { }
-
-      .time {
-        color: $white;
-
-        &::before {
-          content: '('
-        }
-
-        &::after {
-          content: ')'
-        }
-      }
+      color: $gray;
     }
   }
 }
 
 #products {
   .product {
-    display: block;
-    padding: 10px;
-    transition: background-color linear .1s;
+    padding: 10px 3%;
 
     .description {
       padding: 0 20px;
     }
 
-    h3 {
-      &::before {
-        color: $white;
-        content: '## ';
-      }
-    }
-
     h3 a {
-      color: $bright-magenta;
+      color: #666;
+      font-weight: normal;
     }
   }
 }
 
-#status-bar {
-  $nav-height: 24px;
-
-  bottom: 0;
-  height: $nav-height;
-  left: 0;
-  min-height: $nav-height;
+nav {
+  bottom: 20px;
+  padding: 10px;
   position: fixed;
-  width: 100%;
+  right: 20px;
+  text-align: right;
 
   ul {
-    background-color: $black;
-    height: $nav-height;
     margin: 0;
     padding: 0;
 
     li {
-      line-height: $nav-height;
       list-style-type: none;
-      float: left;
 
       a {
         &:link, &:active, &:visited {
-          color: $bright-white;
           text-decoration: none;
         }
       }
 
-      &.datetime {
-        color: $yellow;
-      }
+      &.active {
+        color: $green;
 
-      &.window {
-        padding-left: 10px;
-
-        &.active {
-          color: $green;
-
-          a {
-            &:link, &:active, &:visited {
-              color: $green;
-              text-decoration: none;
-            }
-          }
-
-          &::after {
-            content: '*'
+        a {
+          &:link, &:active, &:visited {
+            color: $green;
+            text-decoration: none;
           }
         }
-      }
-
-      &.session {
-        color: $bright-blue;
-        float: right;
       }
     }
   }

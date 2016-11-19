@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300">
     <title>Ryota Kameoka</title>
   </head>
-  <body id="top" data-spy="scroll" data-target="#status-bar" data-offset="0">
+  <body id="top" data-spy="scroll" data-target="#nav" data-offset="0">
+    <div id="photo">
+      <div id="overlay"></div>
+    </div>
     <h1>Ryota Kameoka</h1>
     <main>
       <section id="profile">
@@ -18,50 +22,55 @@
           <dt>birthday</dt>
           <dd>Jun 7, 1993 (age 23)</dd>
           <dt>location</dt>
-          <dd>Kishiwada, Osaka, Japan <span class="duration">( - Mar 2012)</span></dd>
-          <dd>Sakyo, Kyoto, Japan <span class="duration">(Apr 2012 - Aug 2015)</span></dd>
-          <dd>Meguro, Tokyo, Japan <span class="duration">(Sep 2015 - present)</span></dd>
+          <dd>
+            Meguro, Tokyo, Japan
+            <span class="label green">
+              <i class="fa fa-fw fa-calendar"></i>Sep 2015 - present
+            </span>
+          </dd>
+          <dd>
+            Sakyo, Kyoto, Japan
+            <span class="label gray">
+              <i class="fa fa-fw fa-calendar"></i>Apr 2012 - Aug 2015
+            </span>
+          </dd>
+          <dd>
+            Kishiwada, Osaka, Japan
+            <span class="label gray">
+              <i class="fa fa-fw fa-calendar"></i>- Mar 2012
+            </span>
+          </dd>
         </dl>
       </section>
-      <hr>
       <section id="affiliation">
         <h2>affiliation</h2>
         <dl>
           <dt>university</dt>
-          <dd><a href="http://www.econ.kyoto-u.ac.jp/">Faculty of Economics, Kyoto University</a></dd>
+          <dd>
+            <a href="http://www.econ.kyoto-u.ac.jp/"><span class="nowrap">Faculty of Economics,</span> <span class="nowrap">Kyoto University</span></a>
+            <span class="label green"><i class="fa fa-fw fa-calendar"></i>Apr 2012 - present</span>
+          </dd>
           <dt>company</dt>
-          <dd><a href="http://corporate.lovegraph.me/">Lovegraph Inc.</a></dd>
+          <dd>
+            <a href="http://corporate.lovegraph.me/">Lovegraph Inc.</a>
+            <span class="label green"><i class="fa fa-fw fa-calendar"></i>Mar 2015 - present</span>
+          </dd>
           <dt>community</dt>
-          <dd><a href="https://camph.net">CAMPHOR-</a></dd>
+          <dd>
+            <a href="https://camph.net">CAMPHOR-</a>
+            <span class="label green"><i class="fa fa-fw fa-calendar"></i>May 2014 - present</span>
+          </dd>
         </dl>
       </section>
-      <hr>
       <section id="skills">
         <h2>skills</h2>
         <ul>
           <li>Ruby on Rails</li>
-          <li>Haskell</li>
+          <li>Haskell <span class="label red"><i class="fa fa-fw fa-heart"></i>love</span></li>
           <li>Ruby</li>
           <li>JavaScript</li>
         </ul>
       </section>
-      <hr>
-      <section id="awards">
-        <h2>awards</h2>
-        <ul>
-          <li>
-            <span class="contest">Speee 2014年度サマーインターン "BizTech"</span>
-            <span class="title">MVP</span>
-            <span class="time">Sep 2014</span>
-          </li>
-          <li>
-            <span class="contest">CyberAgent Umeda.hack -Swift 1day-</span>
-            <span class="title">最優秀賞</span>
-            <span class="time">Dec 2014</span>
-          </li>
-        </ul>
-      </section>
-      <hr>
       <section id="links">
         <h2>links</h2>
         <ul>
@@ -127,53 +136,55 @@
           </li>
         </ul>
       </section>
-      <hr>
-      <section id="products" class="row">
+      <section id="products">
         <h2>products</h2>
-        <div class="product col-xs-12">
-          <h3 class="name">
-            <a href="https://www.rd.iimc.kyoto-u.ac.jp/apps/kyodairaku2/index-ecs.html">
-              京大ラクラク設定ツール
-              <small>
-                / Kyodai Rakuraku Setting Tool
-              </small>
+        <div class="row">
+          <div class="product col-xs-12">
+            <h3 class="name">
+              <a href="https://www.rd.iimc.kyoto-u.ac.jp/apps/kyodairaku2/index-ecs.html">
+                京大ラクラク設定ツール
+                <small>
+                  / Kyodai Rakuraku Setting Tool
+                </small>
+              </a>
+              <span class="label gray">2014</span>
+              <span class="label gray">PHP</span>
             </h3>
-          </a>
-          <div class="description">
-            <p>
-              Generates a configuration profile iOS / Mac OS X which configures Wi-Fi (KUINS-Air), VPS (KUINS-IKEv2) and mail service for students (KUMOI).
-              <br>
-              Hosted by <a href="http://www.iimc.kyoto-u.ac.jp/en/" target="_blank">Institute for Information Management and Communication, Kyoto University (IIMC)</a> as a service of <a href="http://www.rd.iimc.kyoto-u.ac.jp/">Campus ITC Labs</a>.
-              <br>
-            </p>
-            <p>
-              Wi-Fi (KUINS-Air), VPN (KUINS-IKEv2), 学生用メール (KUMOI) の設定を一括で行う iOS / Mac OSX 構成プロファイルを作成します．
-              <br>
-              <a href="http://www.rd.iimc.kyoto-u.ac.jp/">キャンパス ITC ラボ</a>の一サービスとして，<a href="http://www.iimc.kyoto-u.ac.jp/ja/" target="_blank">京都大学情報環境機構</a>により提供されています．
-            </p>
+            <div class="description">
+              <p>
+                Generates an iOS / Mac OS X configuration profile which configures Wi-Fi (KUINS-Air), VPS (KUINS-IKEv2) and mail service for students (KUMOI).
+                <br>
+                Hosted by <a href="http://www.iimc.kyoto-u.ac.jp/en/" target="_blank">Institute for Information Management and Communication, Kyoto University (IIMC)</a> as a service of <a href="http://www.rd.iimc.kyoto-u.ac.jp/">Campus ITC Labs</a>.
+                <br>
+              </p>
+              <p>
+                Wi-Fi (KUINS-Air), VPN (KUINS-IKEv2), 学生用メール (KUMOI) の設定を一括で行う iOS / Mac OS X 構成プロファイルを作成します．
+                <br>
+                <a href="http://www.rd.iimc.kyoto-u.ac.jp/">キャンパス ITC ラボ</a>の一サービスとして，<a href="http://www.iimc.kyoto-u.ac.jp/ja/" target="_blank">京都大学情報環境機構</a>により提供されています．
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="product col-xs-12">
-          <h3 class="name">
-            <a href="http://matrixvisualizer.ryota-ka.me/">
-              Matrix Visualizer
-            </a>
-          </h3>
-          <div class="description">
-            <p>
-              Visualizes linear transformations by 2x2 matrices.
-            </p>
-            <p>
-              2x2行列による平面上の線形変換を可視化します．
-            </p>
+          <div class="product col-xs-12">
+            <h3 class="name">
+              <a href="http://matrixvisualizer.ryota-ka.me/">Matrix Visualizer</a>
+              <span class="label gray">2014</span>
+              <span class="label gray">JavaScript</span>
+            </h3>
+            <div class="description">
+              <p>
+                Visualizes linear transformations by 2x2 matrices.
+              </p>
+              <p>
+                2x2行列による平面上の線形変換を可視化します．
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="product col-xs-12">
-          <h3 class="name">
-            <a href="http://20x20.ryota-ka.me/">
-              20x20
-            </a>
-          </h3>
+          <div class="product col-xs-12">
+            <h3 class="name">
+              <a href="http://20x20.ryota-ka.me/">20x20</a>
+              <span class="label gray">2014</span>
+              <span class="label gray">CoffeeScript</span>
+            </h3>
             <div class="description">
               <p>
                 You can exercise multiplications up to 20x20.
@@ -181,81 +192,82 @@
               <p>
                 20x20までの掛け算を練習できます．
               </p>
+            </div>
           </div>
-        </div>
-        <div class="product col-xs-12">
-          <h3 class="name">
-            <a href="http://blog.camph.net/release/camphor-lgtm/">
-              CAMPHOR- LGTM
-            </a>
-          </h3>
-          <div class="description">
-            <p>
-              Hosts LGTM images in CAMPHOR-.
-            </p>
-            <p>
-              CAMPHOR- 内の LGTM 画像をホスティングします．
-            </p>
+          <div class="product col-xs-12">
+            <h3 class="name">
+              <a href="http://blog.camph.net/release/camphor-lgtm/">CAMPHOR- LGTM</a>
+              <span class="label gray">2014</span>
+              <span class="label gray">Ruby on Rails</span>
+            </h3>
+            <div class="description">
+              <p>
+                Hosts LGTM images in CAMPHOR-.
+              </p>
+              <p>
+                CAMPHOR- 内の LGTM 画像をホスティングします．
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="product col-xs-12">
-          <h3 class="name">
-            <a href="http://twterm.ryota-ka.me/">
-              twterm
-            </a>
-          </h3>
-          <div class="description">
-            <p>
-              A full-featured CLI Twitter client
-            </p>
-            <p>
-              コマンドラインインターフェース上で動作する多機能 Twitter クライアントです。
-            </p>
+          <div class="product col-xs-12">
+            <h3 class="name">
+              <a href="http://twterm.ryota-ka.me/">twterm</a>
+              <span class="label gray">2015</span>
+              <span class="label gray">Ruby</span>
+              <span class="label gray">ncurses</span>
+              <span class="label yellow"><i class="fa fa-fw fa-star"></i>favorite</span>
+            </h3>
+            <div class="description">
+              <p>
+                A full-featured CLI Twitter client
+              </p>
+              <p>
+                コマンドラインインターフェース上で動作する多機能 Twitter クライアントです．
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="product col-xs-12">
-          <h3 class="name">
-            <a href="https://github.com/ryota-ka/yo-slack-adapter">
-              yo-slack-adapter
-            </a>
-          </h3>
-          <div class="description">
-            <p>
-              Sends a notification into Slack when you receive a Yo.
-            </p>
-            <p>
-              Yo を Slack に通知します．
-            </p>
+          <div class="product col-xs-12">
+            <h3 class="name">
+              <a href="https://github.com/ryota-ka/yo-slack-adapter">yo-slack-adapter</a>
+              <span class="label gray">2015</span>
+              <span class="label gray">Haskell</span>
+            </h3>
+            <div class="description">
+              <p>
+                Sends a notification into Slack when you receive a Yo.
+              </p>
+              <p>
+                Yo を Slack に通知します．
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="product col-xs-12">
-          <h3 class="name">
-            <a href="https://github.com/ryota-ka/markov-bot">
-              markov-bot
-            </a>
-          </h3>
-          <div class="description">
-            <p>
-              Generates random sentences from your tweet history using the Markov chain, and post them into Twitter.
-            </p>
-            <p>
-              マルコフ連鎖を使用して，ツイートの履歴から文章を生成し，Twitter に投稿します．
-            </p>
+          <div class="product col-xs-12">
+            <h3 class="name">
+              <a href="https://github.com/ryota-ka/markov-bot">markov-bot</a>
+              <span class="label gray">2016</span>
+              <span class="label gray">Haskell</span>
+              <span class="label gray"><i class="fa fa-fw fa-twitter"></i>Twitter</span>
+            </h3>
+            <div class="description">
+              <p>
+                Generates random sentences from your tweet history using the Markov chain, and post them into Twitter.
+              </p>
+              <p>
+                マルコフ連鎖を使用して，ツイートの履歴から文章を生成し，Twitter に投稿します．
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <nav id="status-bar" class="hidden-xs">
+    <nav id="nav" class="hidden-xs">
       <ul class="nav">
-        <li id="datetime" class="datetime"></li>
-        <li class="window"><a href="#top">1:top</a></li>
-        <li class="window"><a href="#profile">2:profile</a></li>
-        <li class="window"><a href="#affiliation">3:affiliation</a></li>
-        <li class="window"><a href="#skills">4:skills</a></li>
-        <li class="window"><a href="#awards">5:awards</a></li>
-        <li class="window"><a href="#links">6:links</a></li>
-        <li class="window"><a href="#products">7:products</a></li>
-        <li class="session">[ryota-ka.me]</li>
+        <li><a href="#top">top</a></li>
+        <li><a href="#profile">profile</a></li>
+        <li><a href="#affiliation">affiliation</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#links">links</a></li>
+        <li><a href="#products">products</a></li>
       </ul>
     </nav>
     <script>
@@ -269,7 +281,7 @@
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
     <script type="application/ld+json">
       [
         {
