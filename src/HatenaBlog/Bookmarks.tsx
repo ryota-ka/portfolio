@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as jQuery from 'jquery';
 import { BlogEntry } from './BlogEntry';
 
 type State = {
@@ -27,13 +26,14 @@ export class Bookmarks extends React.Component<Pick<BlogEntry, 'url'>, State> {
         return <span className="label red"><i className="fa fa-bookmark"></i> {this.state.bookmarks}</span>
     }
 
-    componentDidMount() {
-        jQuery.getJSON(`http://api.b.st-hatena.com/entry.count?callback=?&url=${encodeURIComponent(this.props.url)}`).then(bookmarks => {
-            this.setState(_ => ({
-                loading: true,
-                bookmarks,
-            }));
-        });
+    async componentDidMount() {
+        const res = await fetch(`/api/hatenablog/bookmarks?url=${encodeURIComponent(this.props.url)}`);
+        const { bookmarks } = await res.json();
+
+        this.setState(_ => ({
+            loading: false,
+            bookmarks,
+        }));
     }
 }
 

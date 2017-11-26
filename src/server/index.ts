@@ -11,23 +11,30 @@ const app = new Koa();
 app.use(serve('public'));
 
 app.use(async ctx => {
-    switch (ctx.request.url) {
-        case '/api/github/recent_repositories': {
+    const { url } = ctx.request;
+
+    switch (true) {
+        case url === '/api/github/recent_repositories': {
             ctx.body = await fetchRecentRepositoriesFromGitHub(process.env.GITHUB_API_TOKEN || '');
             break;
         }
-        case '/api/lastfm/recent_tracks': {
+        case url === '/api/lastfm/recent_tracks': {
             ctx.body = await fetchRecentTracksFromLastfm(process.env.LASTFM_API_KEY || '');
             break;
         }
-        case '/api/hatenablog/latest_entries': {
+        case url === '/api/hatenablog/latest_entries': {
             ctx.body = await fetchLatestEntriesFromHatenablog();
+            break;
+        }
+        case url.startsWith('/api/hatenablog/bookmarks'): {
+            const bookmarks = await fetchHatenablogBookmarks(ctx.request.query.url);
+            ctx.body = { bookmarks };
             break;
         }
     }
 }).listen(Number.parseInt(process.env.PORT || '') || 3000);
 
-async function fetchRecentRepositoriesFromGitHub(apiToken: string): Promise<Repository[]> {
+export async function fetchRecentRepositoriesFromGitHub(apiToken: string): Promise<Repository[]> {
     const res = await fetch('https://api.github.com/users/ryota-ka/repos?sort=pushed', {
         headers: {
             Authorization: `token ${apiToken}`
@@ -48,7 +55,7 @@ async function fetchRecentRepositoriesFromGitHub(apiToken: string): Promise<Repo
     return repositories;
 }
 
-async function fetchRecentTracksFromLastfm(apiKey: string): Promise<Track[]> {
+export async function fetchRecentTracksFromLastfm(apiKey: string): Promise<Track[]> {
     const url = `http://ws.audioscrobbler.com/2.0?method=user.getrecenttracks&user=ryotakameoka&api_key=${apiKey}&format=json&limit=5&extended=1`;
     const res = await fetch(url);
     const json = await res.json() as any;
@@ -80,4 +87,19 @@ async function fetchLatestEntriesFromHatenablog(): Promise<BlogEntry[]> {
         url: entry.getElementsByTagName('link')[0].attributes.getNamedItem('href').nodeValue || '',
         publishedAt: new Date(entry.getElementsByTagName('published')[0].textContent || ''),
     }));
+}
+
+async function fetchHatenablogBookmarks(url: string): Promise<number> {
+    const res = await fetch(`http://api.b.st-hatena.com/entry.count?url=${url}`);
+    try {
+        const json = await res.json();
+
+        if (typeof json !== 'number') {
+            throw new Error(`Type mismatch. Expected number but ${json} has ${typeof json}`);
+        }
+
+        return json;
+    } catch (_e) {
+        return 0;
+    }
 }
