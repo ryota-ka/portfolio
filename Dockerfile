@@ -1,4 +1,4 @@
-FROM node:8.2.1 AS build
+FROM node:9.2.0 AS build
 
 ENV NODE_ENV=production
 WORKDIR /portfolio
@@ -17,7 +17,7 @@ RUN NODE_ENV=development yarn && \
     yarn tsc && \
     yarn node-sass -- ./style.scss ./public/style.css
 
-FROM node:8.2.1-alpine
+FROM node:9.2.0-alpine
 
 ENV NODE_ENV=production
 WORKDIR /portfolio
