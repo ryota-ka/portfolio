@@ -23,6 +23,7 @@
     "@types/react": "^15.0.38",
     "@types/react-dom": "^15.5.1",
     "@types/xmldom": "^0.1.29",
+    "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
     "envify": "^4.1.0",
     "node-sass": "^4.5.3",
