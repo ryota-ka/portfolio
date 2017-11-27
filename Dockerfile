@@ -30,4 +30,6 @@ COPY --from=build \
   ./
 RUN yarn
 
+ENV PORT 3000
+
 CMD node dest/server/index.js

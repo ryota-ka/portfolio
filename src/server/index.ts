@@ -32,7 +32,7 @@ app.use(async ctx => {
             break;
         }
     }
-}).listen(Number.parseInt(process.env.PORT || '') || 3000);
+}).listen(Number.parseInt(process.env.PORT || '') || 8080);
 
 export async function fetchRecentRepositoriesFromGitHub(apiToken: string): Promise<Repository[]> {
     const res = await fetch('https://api.github.com/users/ryota-ka/repos?sort=pushed', {
