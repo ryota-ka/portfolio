@@ -31,6 +31,11 @@ app.use(async ctx => {
             ctx.body = { bookmarks };
             break;
         }
+        case url.startsWith('/api/hatena/stars'): {
+            const stars = await fetchHatenaStars(ctx.request.query.url);
+            ctx.body = { stars };
+            break;
+        }
     }
 }).listen(Number.parseInt(process.env.PORT || '') || 8080);
 
@@ -99,6 +104,18 @@ async function fetchHatenablogBookmarks(url: string): Promise<number> {
         }
 
         return json;
+    } catch (_e) {
+        return 0;
+    }
+}
+
+async function fetchHatenaStars(url: string): Promise<number> {
+    const res = await fetch(`https://s.hatena.com/entry.json?uri=${url}`);
+
+    try {
+        const json = await res.json();
+
+        return json.entries[0].stars.length;
     } catch (_e) {
         return 0;
     }
