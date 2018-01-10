@@ -28,7 +28,7 @@ COPY --from=build \
   /portfolio/package.json \
   /portfolio/yarn.lock \
   ./
-RUN yarn
+RUN yarn && yarn cache clean
 
 ENV PORT 3000
 
