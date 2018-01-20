@@ -7,7 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "date-fns": "^1.28.5",
-    "jquery": "^3.2.1",
     "koa": "^2.3.0",
     "koa-static": "^4.0.1",
     "node-fetch": "^1.7.1",
@@ -16,7 +15,6 @@
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
-    "@types/jquery": "^3.2.9",
     "@types/koa": "^2.0.39",
     "@types/koa-static": "^3.0.0",
     "@types/node-fetch": "^1.6.7",
