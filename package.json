@@ -24,9 +24,9 @@
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
     "envify": "^4.1.0",
-    "node-sass": "^4.7.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
+    "stylus": "^0.54.5",
     "tsify": "^3.0.1",
     "typescript": "^2.4.2",
     "uglify-js": "^3.0.27",
@@ -34,11 +34,11 @@
   },
   "name": "portfolio",
   "scripts": {
-    "sass": "node-sass --watch style.scss public/style.css",
-    "serve": "nodemon --delay 0.5 dest/server/index.js",
-    "start": "npm-run-all --parallel sass serve sync watch-front watch-server",
-    "sync": "browser-sync start -f ./public --reload-debounce 500 --port 3000 -p localhost:8080",
-    "watch-front": "watchify src/script.ts -o public/script.js -p [ tsify --target es5 ]",
-    "watch-server": "tsc --watch"
+    "start": "npm-run-all --parallel watch:*",
+    "watch:front": "watchify src/script.ts -o public/script.js -p [ tsify --target es5 ]",
+    "watch:server": "nodemon --delay 0.5 dest/server/index.js",
+    "watch:stylus": "stylus --watch style.styl -o public/style.css",
+    "watch:sync": "browser-sync start -f ./public --reload-debounce 500 --port 3000 -p localhost:8080",
+    "watch:tsc": "tsc --watch"
   }
 }

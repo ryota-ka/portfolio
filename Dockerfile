@@ -4,7 +4,7 @@ ENV NODE_ENV=production
 WORKDIR /portfolio
 COPY \
      package.json \
-     style.scss \
+     style.styl \
      tsconfig.json \
      yarn.lock \
      ./
@@ -12,10 +12,10 @@ COPY public public
 COPY src src
 
 RUN NODE_ENV=development yarn && \
-    yarn browserify -- src/script.ts -o unuglified.js -p [ tsify --target es5 ] -t envify && \
-    yarn uglifyjs -- unuglified.js -c -m -o  public/script.js && \
+    yarn browserify src/script.ts -o unuglified.js -p [ tsify --target es5 ] -t envify && \
+    yarn uglifyjs unuglified.js -c -m -o public/script.js && \
     yarn tsc && \
-    yarn node-sass -- ./style.scss ./public/style.css
+    yarn stylus ./style.styl -o ./public/style.css
 
 FROM node:9.2.0-alpine
 
