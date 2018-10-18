@@ -89,7 +89,7 @@ async function fetchLatestEntriesFromHatenablog(): Promise<BlogEntry[]> {
 
     return Array.from(dom.getElementsByTagName('entry')).slice(0, 5).map(entry => ({
         title: entry.getElementsByTagName('title')[0].textContent || '',
-        url: entry.getElementsByTagName('link')[0].attributes.getNamedItem('href').nodeValue || '',
+        url: entry.getElementsByTagName('link')[0].attributes.getNamedItem('href')!.nodeValue || '',
         publishedAt: new Date(entry.getElementsByTagName('published')[0].textContent || ''),
     }));
 }
