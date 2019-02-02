@@ -5,7 +5,7 @@ class Stars extends React.Component<Pick<Repository, 'stars'>> {
     render() {
         if (this.props.stars === 0) return null;
 
-        return <span className="label yellow"><i className="fa fa-star"></i> {this.props.stars}</span>;
+        return <span className="label yellow"><i className="fa fa-fw fa-star"></i>{this.props.stars}</span>;
     }
 }
 
@@ -13,7 +13,7 @@ class Forks extends React.Component<Pick<Repository, 'forks'>> {
     render() {
         if (this.props.forks === 0) return null;
 
-        return <span className="label green"><i className="fa fa-code-fork"></i> {this.props.forks}</span>;
+        return <span className="label green"><i className="fa fa-fw fa-code-fork"></i>{this.props.forks}</span>;
     }
 }
 

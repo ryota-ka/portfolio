@@ -6,7 +6,7 @@ import { Stars } from './Stars';
 
 class PublishedAt extends React.Component<Pick<BlogEntry, 'publishedAt'>> {
     render() {
-        return <span className="label gray"><i className="fa fa-clock-o"></i> {format(this.props.publishedAt, 'YYYY-MM-DD HH:mm:ss')}</span>;
+        return <span className="label gray"><i className="fa fa-calendar"></i> {format(this.props.publishedAt, 'YYYY-MM-DD')}</span>;
     }
 }
 
@@ -18,7 +18,7 @@ export class BlogEntryListItem extends React.Component<BlogEntry> {
     render() {
         return (
             <li>
-                <a href={this.props.url}>{this.props.title}</a> <Bookmarks url={this.props.url} /> <Stars url={this.props.url} /> <PublishedAt publishedAt={this.props.publishedAt} />
+                <a href={this.props.url}>{this.props.title}</a> <PublishedAt publishedAt={this.props.publishedAt} /> <Bookmarks url={this.props.url} /> <Stars url={this.props.url} />
             </li>
         );
     }

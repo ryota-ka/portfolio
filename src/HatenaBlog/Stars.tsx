@@ -23,7 +23,7 @@ export class Stars extends React.Component<Pick<BlogEntry, 'url'>, State> {
     render() {
         if (this.state.stars === 0) return null;
 
-        return <span className="label yellow"><i className="fa fa-star"></i> {this.state.stars}</span>
+        return <span className="label yellow"><i className="fa fa-fw fa-star"></i>{this.state.stars}</span>
     }
 
     async componentDidMount() {

@@ -6,8 +6,10 @@ $white = #fff
 $yellow = #ff8900
 
 html
-  font-size: 15px
+  font-feature-settings: 'palt'
+  font-size: 16px
   height: 100%
+  line-height 1.4
 
 body
   background-color: $white
@@ -53,6 +55,7 @@ body
   font-size: 0.8rem
   margin-left: 2px
   padding: 1px 3px
+  user-select: none
   vertical-align: text-bottom
   white-space: nowrap
 
@@ -104,25 +107,31 @@ main
     padding: 5px 0
 
   ul
-    padding-left: 2rem
+    padding-left: 0
 
     li
       list-style-type: none
       margin-bottom: 0.2rem
+      &::before
+        content '- '
+
+      ul
+        margin-left 2rem
 
 #profile, #affiliation
   dl
-    margin-left: 1rem
+    margin-left: 0
 
     dt
       margin-bottom: 0.5rem
       margin-top: 1rem
 
-      &::after
-        content: ':'
+      &::before
+        content '## '
 
     dd
       margin-bottom: 0.5rem
+      margin-left: 2rem
 
     .duration
       @extend .nowrap
@@ -131,10 +140,11 @@ main
 
 #products
   .product
-    padding: 10px 3%
+    padding: 5px 0 10px
 
     .description
-      padding: 0 20px
+      padding: 0
+      text-align: justify
 
     h3 a
       color: #666

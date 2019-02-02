@@ -23,7 +23,7 @@ export class Bookmarks extends React.Component<Pick<BlogEntry, 'url'>, State> {
     render() {
         if (this.state.bookmarks === 0) return null;
 
-        return <span className="label red"><i className="fa fa-bookmark"></i> {this.state.bookmarks}</span>
+        return <span className="label red"><i className="fa fa-fw fa-bookmark"></i>{this.state.bookmarks}</span>
     }
 
     async componentDidMount() {
