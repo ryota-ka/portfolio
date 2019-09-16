@@ -5,6 +5,21 @@ $red = #ff535c
 $white = #fff
 $yellow = #ff8900
 
+:root
+  --bg-color: $white
+  --tag-gray: #888
+  --text: #333
+  --text-moderate: #666
+
+@media (prefers-color-scheme: dark)
+  :root
+    --bg-color: #222
+    --tag-gray: #bbb
+    --text: #eee
+    --text-moderate: #aaa
+  #photo
+    filter: brightness(50%) !important
+
 html
   font-feature-settings: 'palt'
   font-size: 16px
@@ -12,8 +27,8 @@ html
   line-height 1.4
 
 body
-  background-color: $white
-  color: #333
+  background-color: var(--bg-color)
+  color: var(--text)
   font-family: Lato, sans-serif
   font-size: 1rem
   height: 100%
@@ -37,7 +52,7 @@ body
     z-index: -1
 
   #overlay
-    background-color: $white
+    background-color: var(--bg-color)
     height: 100%
     left: 0
     opacity: 0
@@ -64,8 +79,8 @@ body
     color: $green
 
   &.gray
-    border-color: $gray
-    color: $gray
+    border-color: var(--tag-gray)
+    color: var(--tag-gray)
 
   &.red
     border-color: $red
@@ -92,7 +107,7 @@ main
     font-weight: bold
 
   h2
-    color: #666
+    color: var(--text-moderate)
     font-size: 1.5rem
     font-weight: bold
 
@@ -147,7 +162,7 @@ main
       text-align: justify
 
     h3 a
-      color: #666
+      color: var(--text-moderate)
       font-weight: normal
 
 nav
