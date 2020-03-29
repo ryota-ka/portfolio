@@ -3,6 +3,5 @@
 ## development
 
 ```sh
-$ yarn
-$ yarn start
+$ make develop
 ```
