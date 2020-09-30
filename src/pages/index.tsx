@@ -23,7 +23,7 @@ export default () => (
         <h2>profile</h2>
         <dl>
           <dt>birthday</dt>
-          <dd>Jun 7, 1993 (age 26)</dd>
+          <dd>Jun 7, 1993 (age 27)</dd>
           <dt>location</dt>
           <dd>
             Nakagyo, Kyoto, Japan
