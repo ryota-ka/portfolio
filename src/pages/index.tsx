@@ -22,67 +22,25 @@ export default () => (
       <section id="profile">
         <h2>profile</h2>
         <dl>
-          <dt>birthday</dt>
+          <dt>
+            <i className="fa fa-fw fa-birthday-cake"></i> born on
+          </dt>
           <dd>Jun 7, 1993 (age 27)</dd>
-          <dt>location</dt>
-          <dd>
-            Nakagyo, Kyoto, Japan
-            <span className="label green">
-              <i className="fa fa-fw fa-calendar"></i>Nov 2019 - present
-            </span>
-          </dd>
-          <dd>
-            Meguro, Tokyo, Japan
-            <span className="label gray">
-              <i className="fa fa-fw fa-calendar"></i>Sep 2015 - Oct 2019
-            </span>
-          </dd>
-          <dd>
-            Sakyo, Kyoto, Japan
-            <span className="label gray">
-              <i className="fa fa-fw fa-calendar"></i>Apr 2012 - Aug 2015
-            </span>
-          </dd>
-          <dd>
-            Kishiwada, Osaka, Japan
-            <span className="label gray">
-              <i className="fa fa-fw fa-calendar"></i>- Mar 2012
-            </span>
-          </dd>
-        </dl>
-      </section>
-      <section id="affiliation">
-        <h2>affiliation</h2>
-        <dl>
           <dt>
-            <i className="fa fa-fw fa-graduation-cap"></i> university
+            <i className="fa fa-fw fa-map-pin"></i> lives in
+          </dt>
+          <dd>Nakagyo, Kyoto, Japan</dd>
+          <dt>
+            <i className="fa fa-fw fa-building-o"></i> works for
           </dt>
           <dd>
-            <a href="http://www.econ.kyoto-u.ac.jp/">
-              <span className="nowrap">Faculty of Economics,</span> <span className="nowrap">Kyoto University</span>
-            </a>
-            <span className="label green">
-              <i className="fa fa-fw fa-calendar"></i>Apr 2012 - present
-            </span>
-            <span className="label yellow">Absent since Oct 2015</span>
+            <a href="https://herp.co.jp/">HERP, Inc.</a> (Lead engineer)
           </dd>
           <dt>
-            <i className="fa fa-fw fa-building-o"></i> company
+            <i className="fa fa-fw fa-graduation-cap"></i> educated at
           </dt>
           <dd>
-            <a href="https://herp.co.jp/">HERP, Inc.</a>
-            <span className="label green">
-              <i className="fa fa-fw fa-calendar"></i>May 2017 - present
-            </span>
-          </dd>
-          <dt>
-            <i className="fa fa-fw fa-users"></i> community
-          </dt>
-          <dd>
-            <a href="https://camph.net">CAMPHOR-</a>
-            <span className="label green">
-              <i className="fa fa-fw fa-calendar"></i>May 2014 - present
-            </span>
+            <a href="http://www.kyoto-u.ac.jp/">Kyoto University</a> (Bachelor of Economics)
           </dd>
         </dl>
       </section>
