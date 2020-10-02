@@ -15,6 +15,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-rss-feed',
+      options: {
+        url: 'https://ryota-ka.hatenablog.com/rss',
+        name: 'HatenaBlog',
+      },
+    },
+    {
       resolve: 'gatsby-source-github',
       options: {
         headers: {

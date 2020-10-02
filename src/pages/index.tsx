@@ -4,7 +4,12 @@ import { graphql } from 'gatsby';
 import { IndexQuery } from '../../types/graphql-types';
 
 import '../../static/style.css';
-import { GitHubRepository, GitHubRepositoryCollection } from '../components';
+import {
+  GitHubRepository,
+  GitHubRepositoryCollection,
+  HatenaBlogEntry,
+  HatenaBlogEntryCollection,
+} from '../components';
 
 type Props = {
   data: IndexQuery;
@@ -109,7 +114,11 @@ export default ({ data }: Props) => (
           <li>
             <i className="fa fa-fw fa-rss"></i>
             <a href="http://ryota-ka.hatenablog.com/">Hatena blog</a>
-            <div id="hatena-blog-latest-entries"></div>
+            <HatenaBlogEntryCollection>
+              {data.allFeedHatenaBlog.edges.map(({ node: entry }) => (
+                <HatenaBlogEntry key={entry.id} url={entry.link} title={entry.title} publishedAt={entry.pubDate} />
+              ))}
+            </HatenaBlogEntryCollection>
           </li>
           <li>
             <i className="fa fa-fw fa-instagram"></i>
@@ -333,6 +342,17 @@ export default ({ data }: Props) => (
 
 export const query = graphql`
   query Index {
+    allFeedHatenaBlog(limit: 5) {
+      edges {
+        node {
+          id
+          title
+          link
+          pubDate
+        }
+      }
+    }
+
     githubViewer {
       pinnedItems {
         nodes {
