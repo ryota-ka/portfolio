@@ -21,7 +21,7 @@ export default ({ data }: Props) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="theme-color" content="#222222" />
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.0/css/all.css" />
       <link rel="stylesheet" href="./style.css" />
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300" />
       <title>Ryota Kameoka</title>
@@ -35,21 +35,21 @@ export default ({ data }: Props) => (
         <h2>profile</h2>
         <dl>
           <dt>
-            <i className="fa fa-fw fa-birthday-cake"></i> born on
+            <i className="fas fa-fw fa-birthday-cake"></i> born on
           </dt>
           <dd>Jun 7, 1993 (age 27)</dd>
           <dt>
-            <i className="fa fa-fw fa-map-pin"></i> lives in
+            <i className="fas fa-fw fa-map-pin"></i> lives in
           </dt>
           <dd>Nakagyo, Kyoto, Japan</dd>
           <dt>
-            <i className="fa fa-fw fa-building-o"></i> works for
+            <i className="fas fa-fw fa-building"></i> works for
           </dt>
           <dd>
             <a href="https://herp.co.jp/">HERP, Inc.</a> (Lead engineer)
           </dd>
           <dt>
-            <i className="fa fa-fw fa-graduation-cap"></i> educated at
+            <i className="fas fa-fw fa-graduation-cap"></i> educated at
           </dt>
           <dd>
             <a href="http://www.kyoto-u.ac.jp/">Kyoto University</a> (Bachelor of Economics)
@@ -72,31 +72,31 @@ export default ({ data }: Props) => (
         <h2>links</h2>
         <ul>
           <li>
-            <i className="fa fa-fw fa-amazon"></i>
+            <i className="fab fa-fw fa-amazon"></i>
             <a href="http://www.amazon.co.jp/registry/wishlist/NCRDLUWP5AR5">Amazon wishlist</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-apple"></i>
+            <i className="fab fa-fw fa-apple"></i>
             <a href="https://itunes.apple.com/profile/ryotakameoka">Apple Music</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-bitcoin"></i>
+            <i className="fab fa-fw fa-bitcoin"></i>
             <a href="https://blockchain.info/address/13n9dyoCo8DMhSzqboUjaPfJnu3DHButj5">bitcoin</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-envelope"></i>
+            <i className="fas fa-fw fa-envelope"></i>
             <a href="mailto:kameoka.ryota@gmail.com">E-mail</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-facebook"></i>
+            <i className="fab fa-fw fa-facebook"></i>
             <a href="https://www.facebook.com/kameoka.ryota">Facebook</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-foursquare"></i>
+            <i className="fab fa-fw fa-foursquare"></i>
             <a href="https://foursquare.com/user/4420704">Foursquare</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-github"></i>
+            <i className="fab fa-fw fa-github"></i>
             <a href="https://github.com/ryota-ka">GitHub</a>
             <GitHubRepositoryCollection>
               {data.githubViewer?.pinnedItems?.nodes?.map(repo => (
@@ -112,7 +112,7 @@ export default ({ data }: Props) => (
             </GitHubRepositoryCollection>
           </li>
           <li>
-            <i className="fa fa-fw fa-rss"></i>
+            <i className="fas fa-fw fa-rss"></i>
             <a href="http://ryota-ka.hatenablog.com/">Hatena blog</a>
             <HatenaBlogEntryCollection>
               {data.allFeedHatenaBlog.edges.map(({ node: entry }) => (
@@ -121,52 +121,52 @@ export default ({ data }: Props) => (
             </HatenaBlogEntryCollection>
           </li>
           <li>
-            <i className="fa fa-fw fa-instagram"></i>
+            <i className="fab fa-fw fa-instagram"></i>
             <a href="https://www.instagram.com/ryotakameoka/">Instagram</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-key"></i>
+            <i className="fab fa-fw fa-keybase"></i>
             <a href="https://keybase.io/ryotakameoka">Keybase</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-lastfm"></i>
+            <i className="fab fa-fw fa-lastfm"></i>
             <a href="http://www.last.fm/user/ryotakameoka">Last.fm</a>
             <div id="lastfm-recent-tracks"></div>
           </li>
           <li>
-            <i className="fa fa-fw fa-linkedin"></i>
+            <i className="fab fa-fw fa-linkedin"></i>
             <a href="https://www.linkedin.com/in/ryota-ka/">LinkedIn</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-reddit-alien"></i>
+            <i className="fab fa-fw fa-reddit-alien"></i>
             <a href="https://www.reddit.com/user/ryota-ka">Reddit</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-music"></i>
+            <i className="fas fa-fw fa-music"></i>
             <a href="https://scrapbox.io/ryota-ka-music/">Scrapbox (ryota-ka-music)</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-snapchat-ghost"></i>
+            <i className="fab fa-fw fa-snapchat-ghost"></i>
             <a href="https://www.snapchat.com/add/ryota-ka">Snapchat</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-skype"></i>
+            <i className="fab fa-fw fa-skype"></i>
             <a href="skype:kameoka.ryota?userinfo">Skype</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-twitter"></i>
+            <i className="fab fa-fw fa-twitter"></i>
             <a href="https://twitter.com/ryotakameoka">Twitter</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-globe"></i>
+            <i className="fas fa-fw fa-globe"></i>
             <a href="https://www.wantedly.com/users/639008">Wantedly</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-square"></i>
+            <i className="fas fa-fw fa-square"></i>
             <a href="https://www.justyo.co/KAMEOKA/">Yo</a>
           </li>
           <li>
-            <i className="fa fa-fw fa-youtube"></i>
+            <i className="fab fa-fw fa-youtube"></i>
             <a href="https://www.youtube.com/channel/UC7pkiEXXwH1PiR-2xnHNLmQ">YouTube</a>
           </li>
         </ul>
@@ -202,7 +202,7 @@ export default ({ data }: Props) => (
               <span className="label gray">2016</span>
               <span className="label gray">Haskell</span>
               <span className="label gray">
-                <i className="fa fa-fw fa-twitter"></i>Twitter
+                <i className="fab fa-fw fa-twitter"></i>Twitter
               </span>
             </h3>
             <div className="description">
@@ -231,10 +231,10 @@ export default ({ data }: Props) => (
               <span className="label gray">Ruby</span>
               <span className="label gray">ncurses</span>
               <span className="label gray">
-                <i className="fa fa-fw fa-twitter"></i>Twitter
+                <i className="fab fa-fw fa-twitter"></i>Twitter
               </span>
               <span className="label yellow">
-                <i className="fa fa-fw fa-star"></i>favorite
+                <i className="fas fa-fw fa-star"></i>favorite
               </span>
             </h3>
             <div className="description">
