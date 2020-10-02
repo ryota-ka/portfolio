@@ -1,9 +1,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { IndexQuery } from '../../types/graphql-types';
 
 import '../../static/style.css';
+import { GitHubRepository, GitHubRepositoryCollection } from '../components';
 
-export default () => (
+type Props = {
+  data: IndexQuery;
+};
+
+export default ({ data }: Props) => (
   <>
     <Helmet>
       <meta charSet="utf-8" />
@@ -86,7 +93,18 @@ export default () => (
           <li>
             <i className="fa fa-fw fa-github"></i>
             <a href="https://github.com/ryota-ka">GitHub</a>
-            <div id="github-recent-repositories"></div>
+            <GitHubRepositoryCollection>
+              {data.githubViewer?.pinnedItems?.nodes?.map(repo => (
+                <GitHubRepository
+                  name={repo.nameWithOwner}
+                  url={repo.url}
+                  description={repo.description}
+                  primaryLanguage={repo.primaryLanguage.name}
+                  stars={repo.stargazerCount}
+                  key={repo.id}
+                />
+              ))}
+            </GitHubRepositoryCollection>
           </li>
           <li>
             <i className="fa fa-fw fa-rss"></i>
@@ -312,3 +330,23 @@ export default () => (
     </main>
   </>
 );
+
+export const query = graphql`
+  query Index {
+    githubViewer {
+      pinnedItems {
+        nodes {
+          id
+          nameWithOwner
+          description
+          stargazerCount
+          forkCount
+          primaryLanguage {
+            name
+          }
+          url
+        }
+      }
+    }
+  }
+`;

@@ -2,3 +2,5 @@
 node_modules
 public
 yarn-error.log
+types/*
+!.keep

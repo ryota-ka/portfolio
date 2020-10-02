@@ -1,0 +1,39 @@
+.className {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 0.8rem;
+  margin-left: 4px;
+  padding: 1px 3px;
+  user-select: none;
+  vertical-align: text-bottom;
+  white-space: nowrap;
+}
+
+.green {
+  composes: className;
+
+  border-color: #26c45f;
+  color: #26c45f;
+}
+
+.gray {
+  composes: className;
+
+  border-color: var(--tag-gray);
+  color: var(--tag-gray);
+}
+
+.red {
+  composes: className;
+
+  border-color: #ff535c;
+  color: #ff535c;
+}
+
+.yellow {
+  composes: className;
+
+  border-color: #ff8900;
+  color: #ff8900;
+}
