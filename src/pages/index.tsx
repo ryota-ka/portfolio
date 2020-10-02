@@ -154,6 +154,10 @@ export default ({ data }: Props) => (
             <a href="skype:kameoka.ryota?userinfo">Skype</a>
           </li>
           <li>
+            <i className="fab fa-fw fa-strava"></i>
+            <a href="https://www.strava.com/athletes/55493141">Strava</a>
+          </li>
+          <li>
             <i className="fab fa-fw fa-twitter"></i>
             <a href="https://twitter.com/ryotakameoka">Twitter</a>
           </li>
