@@ -28,7 +28,7 @@ export function HatenaBlogEntry({ title, url, publishedAt }: Props): React.React
 
   return (
     <li>
-      <a href={normalizedURL} target="_blank" rel="noopener noreferrer">
+      <a href={normalizedURL} target="_blank" rel="noopener">
         {title}
       </a>
       <Label color="gray" icon="calendar">

@@ -16,7 +16,9 @@ type Props = Readonly<{
 export function GitHubRepository({ name, url, stars, primaryLanguage, description, key }: Props): React.ReactElement {
   return (
     <li key={key}>
-      <a href={url}>{name}</a>
+      <a href={url} target="_blank" rel="noopener">
+        {name}
+      </a>
       <Label icon="terminal" color="gray">
         {primaryLanguage}
       </Label>

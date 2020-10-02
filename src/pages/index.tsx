@@ -46,13 +46,19 @@ export default ({ data }: Props) => (
             <i className="fas fa-fw fa-building"></i> works for
           </dt>
           <dd>
-            <a href="https://herp.co.jp/">HERP, Inc.</a> (Lead engineer)
+            <a href="https://herp.co.jp/" target="_blank" rel="noopener">
+              HERP, Inc.
+            </a>{' '}
+            (Lead engineer)
           </dd>
           <dt>
             <i className="fas fa-fw fa-graduation-cap"></i> educated at
           </dt>
           <dd>
-            <a href="http://www.kyoto-u.ac.jp/">Kyoto University</a> (Bachelor of Economics)
+            <a href="http://www.kyoto-u.ac.jp/" target="_blank" rel="noopener">
+              Kyoto University
+            </a>{' '}
+            (Bachelor of Economics)
           </dd>
         </dl>
       </section>
@@ -73,31 +79,45 @@ export default ({ data }: Props) => (
         <ul>
           <li>
             <i className="fab fa-fw fa-amazon"></i>
-            <a href="http://www.amazon.co.jp/registry/wishlist/NCRDLUWP5AR5">Amazon wishlist</a>
+            <a href="http://www.amazon.co.jp/registry/wishlist/NCRDLUWP5AR5" target="_blank" rel="noopener">
+              Amazon wishlist
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-apple"></i>
-            <a href="https://itunes.apple.com/profile/ryotakameoka">Apple Music</a>
+            <a href="https://itunes.apple.com/profile/ryotakameoka" target="_blank" rel="noopener">
+              Apple Music
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-bitcoin"></i>
-            <a href="https://blockchain.info/address/13n9dyoCo8DMhSzqboUjaPfJnu3DHButj5">bitcoin</a>
+            <a href="https://blockchain.info/address/13n9dyoCo8DMhSzqboUjaPfJnu3DHButj5" target="_blank" rel="noopener">
+              bitcoin
+            </a>
           </li>
           <li>
             <i className="fas fa-fw fa-envelope"></i>
-            <a href="mailto:kameoka.ryota@gmail.com">E-mail</a>
+            <a href="mailto:kameoka.ryota@gmail.com" target="_blank" rel="noopener">
+              E-mail
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-facebook"></i>
-            <a href="https://www.facebook.com/kameoka.ryota">Facebook</a>
+            <a href="https://www.facebook.com/kameoka.ryota" target="_blank" rel="noopener">
+              Facebook
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-foursquare"></i>
-            <a href="https://foursquare.com/user/4420704">Foursquare</a>
+            <a href="https://foursquare.com/user/4420704" target="_blank" rel="noopener">
+              Foursquare
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-github"></i>
-            <a href="https://github.com/ryota-ka">GitHub</a>
+            <a href="https://github.com/ryota-ka" target="_blank" rel="noopener">
+              GitHub
+            </a>
             <GitHubRepositoryCollection>
               {data.githubViewer?.pinnedItems?.nodes?.map(repo => (
                 <GitHubRepository
@@ -113,7 +133,9 @@ export default ({ data }: Props) => (
           </li>
           <li>
             <i className="fas fa-fw fa-rss"></i>
-            <a href="http://ryota-ka.hatenablog.com/">Hatena blog</a>
+            <a href="http://ryota-ka.hatenablog.com/" target="_blank" rel="noopener">
+              Hatena blog
+            </a>
             <HatenaBlogEntryCollection>
               {data.allFeedHatenaBlog.edges.map(({ node: entry }) => (
                 <HatenaBlogEntry key={entry.id} url={entry.link} title={entry.title} publishedAt={entry.pubDate} />
@@ -122,56 +144,82 @@ export default ({ data }: Props) => (
           </li>
           <li>
             <i className="fab fa-fw fa-instagram"></i>
-            <a href="https://www.instagram.com/ryotakameoka/">Instagram</a>
+            <a href="https://www.instagram.com/ryotakameoka/" target="_blank" rel="noopener">
+              Instagram
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-keybase"></i>
-            <a href="https://keybase.io/ryotakameoka">Keybase</a>
+            <a href="https://keybase.io/ryotakameoka" target="_blank" rel="noopener">
+              Keybase
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-lastfm"></i>
-            <a href="http://www.last.fm/user/ryotakameoka">Last.fm</a>
+            <a href="http://www.last.fm/user/ryotakameoka" target="_blank" rel="noopener">
+              Last.fm
+            </a>
             <div id="lastfm-recent-tracks"></div>
           </li>
           <li>
             <i className="fab fa-fw fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/ryota-ka/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ryota-ka/" target="_blank" rel="noopener">
+              LinkedIn
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-reddit-alien"></i>
-            <a href="https://www.reddit.com/user/ryota-ka">Reddit</a>
+            <a href="https://www.reddit.com/user/ryota-ka" target="_blank" rel="noopener">
+              Reddit
+            </a>
           </li>
           <li>
             <i className="fas fa-fw fa-music"></i>
-            <a href="https://scrapbox.io/ryota-ka-music/">Scrapbox (ryota-ka-music)</a>
+            <a href="https://scrapbox.io/ryota-ka-music/" target="_blank" rel="noopener">
+              Scrapbox (ryota-ka-music)
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-snapchat-ghost"></i>
-            <a href="https://www.snapchat.com/add/ryota-ka">Snapchat</a>
+            <a href="https://www.snapchat.com/add/ryota-ka" target="_blank" rel="noopener">
+              Snapchat
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-skype"></i>
-            <a href="skype:kameoka.ryota?userinfo">Skype</a>
+            <a href="skype:kameoka.ryota?userinfo" target="_blank" rel="noopener">
+              Skype
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-strava"></i>
-            <a href="https://www.strava.com/athletes/55493141">Strava</a>
+            <a href="https://www.strava.com/athletes/55493141" target="_blank" rel="noopener">
+              Strava
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-twitter"></i>
-            <a href="https://twitter.com/ryotakameoka">Twitter</a>
+            <a href="https://twitter.com/ryotakameoka" target="_blank" rel="noopener">
+              Twitter
+            </a>
           </li>
           <li>
             <i className="fas fa-fw fa-globe"></i>
-            <a href="https://www.wantedly.com/users/639008">Wantedly</a>
+            <a href="https://www.wantedly.com/users/639008" target="_blank" rel="noopener">
+              Wantedly
+            </a>
           </li>
           <li>
             <i className="fas fa-fw fa-square"></i>
-            <a href="https://www.justyo.co/KAMEOKA/">Yo</a>
+            <a href="https://www.justyo.co/KAMEOKA/" target="_blank" rel="noopener">
+              Yo
+            </a>
           </li>
           <li>
             <i className="fab fa-fw fa-youtube"></i>
-            <a href="https://www.youtube.com/channel/UC7pkiEXXwH1PiR-2xnHNLmQ">YouTube</a>
+            <a href="https://www.youtube.com/channel/UC7pkiEXXwH1PiR-2xnHNLmQ" target="_blank" rel="noopener">
+              YouTube
+            </a>
           </li>
         </ul>
       </section>
@@ -180,7 +228,9 @@ export default ({ data }: Props) => (
         <div className="row">
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="https://github.com/ryota-ka/farbe">farbe</a>
+              <a href="https://github.com/ryota-ka/farbe" target="_blank" rel="noopener">
+                farbe
+              </a>
               <span className="label gray">2018</span>
               <span className="label gray">Rust</span>
             </h3>
@@ -191,7 +241,9 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="https://hackage.haskell.org/package/duration">duration</a>
+              <a href="https://hackage.haskell.org/package/duration" target="_blank" rel="noopener">
+                duration
+              </a>
               <span className="label gray">2018</span>
               <span className="label gray">Haskell</span>
             </h3>
@@ -202,7 +254,9 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="https://github.com/ryota-ka/markov-bot">markov-bot</a>
+              <a href="https://github.com/ryota-ka/markov-bot" target="_blank" rel="noopener">
+                markov-bot
+              </a>
               <span className="label gray">2016</span>
               <span className="label gray">Haskell</span>
               <span className="label gray">
@@ -218,7 +272,9 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="https://github.com/ryota-ka/yo-slack-adapter">yo-slack-adapter</a>
+              <a href="https://github.com/ryota-ka/yo-slack-adapter" target="_blank" rel="noopener">
+                yo-slack-adapter
+              </a>
               <span className="label gray">2015</span>
               <span className="label gray">Haskell</span>
               <span className="label gray">Yo</span>
@@ -230,7 +286,9 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="http://twterm.ryota-ka.me/">twterm</a>
+              <a href="http://twterm.ryota-ka.me/" target="_blank" rel="noopener">
+                twterm
+              </a>
               <span className="label gray">2015</span>
               <span className="label gray">Ruby</span>
               <span className="label gray">ncurses</span>
@@ -248,23 +306,33 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="http://ipsj.camph.net/">IPSJ77Now⤴︎⤴︎ (nanana-now)</a>
+              <a href="http://ipsj.camph.net/" target="_blank" rel="noopener">
+                IPSJ77Now⤴︎⤴︎ (nanana-now)
+              </a>
               <span className="label gray">2015</span>
               <span className="label gray">Node.js</span>
             </h3>
             <div className="description">
               <p>
                 An activity visualization service for{' '}
-                <a href="http://www.ipsj.or.jp/event/taikai/77/">The 77th National Convention of IPSJ</a>{' '}
-                <a href="http://www.ipsj.or.jp/english/">(Information Processing Society of Japan)</a>
+                <a href="http://www.ipsj.or.jp/event/taikai/77/" target="_blank" rel="noopener">
+                  The 77th National Convention of IPSJ
+                </a>{' '}
+                <a href="http://www.ipsj.or.jp/english/" target="_blank" rel="noopener">
+                  (Information Processing Society of Japan)
+                </a>
                 , which was held at Kyoto University.
                 <br />
                 Mainly worked on server-side implementation.
               </p>
               <p>
                 京都大学で開催された
-                <a href="http://www.ipsj.or.jp/">情報処理学会</a>
-                <a href="http://www.ipsj.or.jp/event/taikai/77/">第77回全国大会</a>
+                <a href="http://www.ipsj.or.jp/" target="_blank" rel="noopener">
+                  情報処理学会
+                </a>
+                <a href="http://www.ipsj.or.jp/event/taikai/77/" target="_blank" rel="noopener">
+                  第77回全国大会
+                </a>
                 の各会場の盛り上がりを可視化するサービスです．
                 <br />
                 主にサーバーサイドの実装を担当しました．
@@ -273,7 +341,9 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="http://blog.camph.net/release/camphor-lgtm/">CAMPHOR- LGTM</a>
+              <a href="http://blog.camph.net/release/camphor-lgtm/" target="_blank" rel="noopener">
+                CAMPHOR- LGTM
+              </a>
               <span className="label gray">2014</span>
               <span className="label gray">Ruby on Rails</span>
             </h3>
@@ -284,7 +354,9 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="http://matrixvisualizer.ryota-ka.me/">Matrix Visualizer</a>
+              <a href="http://matrixvisualizer.ryota-ka.me/" target="_blank" rel="noopener">
+                Matrix Visualizer
+              </a>
               <span className="label gray">2014</span>
               <span className="label gray">JavaScript</span>
             </h3>
@@ -295,7 +367,9 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="http://20x20.ryota-ka.me/">20x20</a>
+              <a href="http://20x20.ryota-ka.me/" target="_blank" rel="noopener">
+                20x20
+              </a>
               <span className="label gray">2014</span>
               <span className="label gray">CoffeeScript</span>
             </h3>
@@ -306,7 +380,11 @@ export default ({ data }: Props) => (
           </div>
           <div className="product col-xs-12">
             <h3 className="name">
-              <a href="https://www.rd.iimc.kyoto-u.ac.jp/apps/kyodairaku2/index-ecs.html">
+              <a
+                href="https://www.rd.iimc.kyoto-u.ac.jp/apps/kyodairaku2/index-ecs.html"
+                target="_blank"
+                rel="noopener"
+              >
                 京大ラクラク設定ツール
                 <small>/ Kyodai Rakuraku Setting Tool</small>
               </a>
@@ -319,19 +397,25 @@ export default ({ data }: Props) => (
                 and mail service for students (KUMOI).
                 <br />
                 Hosted by{' '}
-                <a href="http://www.iimc.kyoto-u.ac.jp/en/" target="_blank">
+                <a href="http://www.iimc.kyoto-u.ac.jp/en/" target="_blank" rel="noopener">
                   Institute for Information Management and Communication, Kyoto University (IIMC)
                 </a>{' '}
-                as a service of <a href="http://www.rd.iimc.kyoto-u.ac.jp/">Campus ITC Labs</a>.
+                as a service of{' '}
+                <a href="http://www.rd.iimc.kyoto-u.ac.jp/" target="_blank" rel="noopener">
+                  Campus ITC Labs
+                </a>
+                .
                 <br />
               </p>
               <p>
                 Wi-Fi (KUINS-Air), VPN (KUINS-IKEv2), 学生用メール (KUMOI) の設定を一括で行う iOS / Mac OS X
                 構成プロファイルを作成します．
                 <br />
-                <a href="http://www.rd.iimc.kyoto-u.ac.jp/">キャンパス ITC ラボ</a>
+                <a href="http://www.rd.iimc.kyoto-u.ac.jp/" target="_blank" rel="noopener">
+                  キャンパス ITC ラボ
+                </a>
                 の一サービスとして，
-                <a href="http://www.iimc.kyoto-u.ac.jp/ja/" target="_blank">
+                <a href="http://www.iimc.kyoto-u.ac.jp/ja/" target="_blank" rel="noopener">
                   京都大学情報環境機構
                 </a>
                 により提供されています．
