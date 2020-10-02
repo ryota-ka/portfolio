@@ -193,7 +193,7 @@ export default ({ data }: Props) => (
           </li>
           <li>
             <i className="fab fa-fw fa-strava"></i>
-            <a href="https://www.strava.com/athletes/55493141" target="_blank" rel="noopener">
+            <a href="https://www.strava.com/athletes/ryota-ka" target="_blank" rel="noopener">
               Strava
             </a>
           </li>
