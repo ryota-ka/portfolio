@@ -11,7 +11,6 @@
     "gatsby-plugin-graphql-codegen": "^2.7.1",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-plugin-typescript": "^2.3.1",
-    "gatsby-source-github": "^0.0.2",
     "gatsby-source-rss-feed": "^1.2.2",
     "jquery": "^3.5.1",
     "prettier": "^2.0.2",
@@ -19,5 +18,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "gatsby-source-graphql": "^2.7.6"
   }
 }

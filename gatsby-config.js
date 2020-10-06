@@ -22,32 +22,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-github',
+      resolve: 'gatsby-source-graphql',
       options: {
+        typeName: 'GitHub',
+        fieldName: 'github',
+        url: 'https://api.github.com/graphql',
         headers: {
           Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         },
-        queries: [
-          `{
-             viewer {
-               pinnedItems(first: 6, types: [REPOSITORY]) {
-                 nodes {
-                   ... on Repository {
-                     id
-                     nameWithOwner
-                     stargazerCount
-                     description
-                     forkCount
-                     primaryLanguage {
-                       name
-                     }
-                     url
-                   }
-                 }
-               }
-             }
-          }`,
-        ],
+        fetchOptions: {},
       },
     },
   ],

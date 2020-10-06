@@ -119,7 +119,7 @@ export default ({ data }: Props) => (
               GitHub
             </a>
             <GitHubRepositoryCollection>
-              {data.githubViewer?.pinnedItems?.nodes?.map(repo => (
+              {data.github.viewer.pinnedItems.nodes.map(repo => (
                 <GitHubRepository
                   name={repo.nameWithOwner}
                   url={repo.url}
@@ -441,18 +441,22 @@ export const query = graphql`
       }
     }
 
-    githubViewer {
-      pinnedItems {
-        nodes {
-          id
-          nameWithOwner
-          description
-          stargazerCount
-          forkCount
-          primaryLanguage {
-            name
+    github {
+      viewer {
+        pinnedItems(first: 6, types: [REPOSITORY]) {
+          nodes {
+            ... on GitHub_Repository {
+              id
+              nameWithOwner
+              stargazerCount
+              description
+              forkCount
+              primaryLanguage {
+                name
+              }
+              url
+            }
           }
-          url
         }
       }
     }
