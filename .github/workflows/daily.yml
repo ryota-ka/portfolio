@@ -1,0 +1,17 @@
+name: daily
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+
+env:
+  URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
+
+jobs:
+  build-hook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hook build
+        run: |
+          curl -X POST -d {} $URL
