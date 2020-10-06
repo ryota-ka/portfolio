@@ -10,10 +10,15 @@ import {
   HatenaBlogEntry,
   HatenaBlogEntryCollection,
 } from '../components';
+import { differenceInYears, fromUnixTime } from 'date-fns/esm';
 
 type Props = {
   data: IndexQuery;
 };
+
+const birthday = fromUnixTime(739378800); // 1993-06-07T00:00:00+0900
+const now = new Date();
+const age = differenceInYears(now, birthday);
 
 export default ({ data }: Props) => (
   <>
@@ -37,7 +42,7 @@ export default ({ data }: Props) => (
           <dt>
             <i className="fas fa-fw fa-birthday-cake"></i> born on
           </dt>
-          <dd>Jun 7, 1993 (age 27)</dd>
+          <dd>Jun 7, 1993 (age {age})</dd>
           <dt>
             <i className="fas fa-fw fa-map-pin"></i> lives in
           </dt>
