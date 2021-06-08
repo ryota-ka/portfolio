@@ -8,7 +8,7 @@ type Props = Readonly<{
   name: string;
   description: string;
   url: string;
-  primaryLanguage: string;
+  primaryLanguage?: string;
   stars: number;
   key: string;
 }>;
@@ -19,9 +19,11 @@ export function GitHubRepository({ name, url, stars, primaryLanguage, descriptio
       <a href={url} target="_blank" rel="noopener">
         {name}
       </a>
-      <Label icon="terminal" color="gray">
-        {primaryLanguage}
-      </Label>
+      {primaryLanguage && (
+        <Label icon="terminal" color="gray">
+          {primaryLanguage}
+        </Label>
+      )}
       <Label icon="star" color="yellow">
         {stars}
       </Label>

@@ -129,7 +129,7 @@ export default ({ data }: Props) => (
                   name={repo.nameWithOwner}
                   url={repo.url}
                   description={repo.description}
-                  primaryLanguage={repo.primaryLanguage.name}
+                  primaryLanguage={repo.primaryLanguage?.name}
                   stars={repo.stargazerCount}
                   key={repo.id}
                 />
