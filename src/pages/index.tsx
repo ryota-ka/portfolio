@@ -102,7 +102,7 @@ export default ({ data }: Props) => (
           </li>
           <li>
             <i className="fas fa-fw fa-envelope"></i>
-            <a href="mailto:kameoka.ryota@gmail.com" target="_blank" rel="noopener">
+            <a href="mailto:ok@ryota-ka.me" target="_blank" rel="noopener">
               E-mail
             </a>
           </li>
