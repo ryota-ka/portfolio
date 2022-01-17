@@ -9,7 +9,7 @@ type Props = Readonly<{
   publishedAt: string;
 }>;
 
-export function HatenaBlogEntry({ title, url, publishedAt }: Props): React.ReactElement {
+export function BlogPost({ title, url, publishedAt }: Props): React.ReactElement {
   const date = format(new Date(publishedAt), 'MMM d, yyyy');
 
   const [bookmarks, setBookmarks] = React.useState<number | null>(null);

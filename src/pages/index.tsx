@@ -4,12 +4,7 @@ import { graphql } from 'gatsby';
 import { IndexQuery } from '../../types/graphql-types';
 
 import '../../static/style.css';
-import {
-  GitHubRepository,
-  GitHubRepositoryCollection,
-  HatenaBlogEntry,
-  HatenaBlogEntryCollection,
-} from '../components';
+import { GitHubRepository, GitHubRepositoryCollection, BlogPost, BlogPostCollection } from '../components';
 import { differenceInYears, fromUnixTime } from 'date-fns/esm';
 
 type Props = {
@@ -138,14 +133,14 @@ export default ({ data }: Props) => (
           </li>
           <li>
             <i className="fas fa-fw fa-rss"></i>
-            <a href="http://ryota-ka.hatenablog.com/" target="_blank" rel="noopener">
-              Hatena blog
+            <a href="https://blog.ryota-ka.me/" target="_blank" rel="noopener">
+              Blog
             </a>
-            <HatenaBlogEntryCollection>
-              {data.allFeedHatenaBlog.edges.map(({ node: entry }) => (
-                <HatenaBlogEntry key={entry.id} url={entry.link} title={entry.title} publishedAt={entry.pubDate} />
+            <BlogPostCollection>
+              {data.allFeedBlog.edges.map(({ node: post }) => (
+                <BlogPost key={post.id} url={post.link} title={post.title} publishedAt={post.pubDate} />
               ))}
-            </HatenaBlogEntryCollection>
+            </BlogPostCollection>
           </li>
           <li>
             <i className="fab fa-fw fa-instagram"></i>
@@ -435,7 +430,7 @@ export default ({ data }: Props) => (
 
 export const query = graphql`
   query Index {
-    allFeedHatenaBlog(limit: 5) {
+    allFeedBlog(limit: 5) {
       edges {
         node {
           id
