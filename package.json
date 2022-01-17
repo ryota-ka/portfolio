@@ -1,25 +1,25 @@
 {
   "private": true,
   "devDependencies": {
-    "@types/jquery": "^3.5.1",
-    "@types/node": "^13.9.5",
-    "@types/react": "^16.9.27",
-    "@types/react-dom": "^16.9.5",
-    "date-fns": "^2.16.1",
-    "gatsby": "^2.19.45",
-    "gatsby-plugin-google-analytics": "^2.2.2",
-    "gatsby-plugin-graphql-codegen": "^2.7.1",
-    "gatsby-plugin-react-helmet": "^3.2.1",
-    "gatsby-plugin-typescript": "^2.3.1",
-    "gatsby-source-rss-feed": "^1.2.2",
-    "jquery": "^3.5.1",
-    "prettier": "^2.0.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "typescript": "^3.8.3"
+    "@types/jquery": "3.5.1",
+    "@types/node": "13.13.21",
+    "@types/react": "16.9.49",
+    "@types/react-dom": "16.9.8",
+    "date-fns": "2.16.1",
+    "gatsby": "2.24.66",
+    "gatsby-plugin-google-analytics": "2.3.15",
+    "gatsby-plugin-graphql-codegen": "2.7.1",
+    "gatsby-plugin-react-helmet": "3.3.12",
+    "gatsby-plugin-typescript": "2.4.21",
+    "gatsby-source-rss-feed": "1.2.2",
+    "jquery": "3.5.1",
+    "prettier": "2.1.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet": "5.2.1",
+    "typescript": "3.9.7"
   },
   "dependencies": {
-    "gatsby-source-graphql": "^2.7.6"
+    "gatsby-source-graphql": "2.7.6"
   }
 }
