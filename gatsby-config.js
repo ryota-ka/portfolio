@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-rss-feed',
       options: {
-        url: 'https://ryota-ka.hatenablog.com/rss',
-        name: 'HatenaBlog',
+        url: 'https://blog.ryota-ka.me/feed.xml',
+        name: 'Blog',
       },
     },
     {

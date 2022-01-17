@@ -4,6 +4,6 @@ type Props = Readonly<{
   children: React.ReactNode;
 }>;
 
-export function HatenaBlogEntryCollection({ children }: Props): React.ReactElement {
+export function BlogPostCollection({ children }: Props): React.ReactElement {
   return <ul>{children}</ul>;
 }
