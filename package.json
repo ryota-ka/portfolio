@@ -2,7 +2,7 @@
   "private": true,
   "devDependencies": {
     "@types/jquery": "3.5.14",
-    "@types/node": "14.18.12",
+    "@types/node": "16.11.26",
     "@types/react": "17.0.40",
     "@types/react-dom": "17.0.13",
     "date-fns": "2.28.0",
