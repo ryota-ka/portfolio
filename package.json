@@ -14,8 +14,8 @@
     "gatsby-source-rss-feed": "1.2.2",
     "jquery": "3.6.0",
     "prettier": "2.6.2",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
     "react-helmet": "6.1.0",
     "typescript": "4.6.4"
   },
