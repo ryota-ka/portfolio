@@ -2,8 +2,8 @@
   "private": true,
   "devDependencies": {
     "@types/jquery": "3.5.14",
-    "@types/node": "16.11.44",
-    "@types/react": "18.0.15",
+    "@types/node": "16.11.47",
+    "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "date-fns": "2.29.1",
     "gatsby": "3.14.6",
