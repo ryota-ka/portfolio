@@ -2,7 +2,7 @@
   "private": true,
   "devDependencies": {
     "@types/jquery": "3.5.14",
-    "@types/node": "16.11.49",
+    "@types/node": "16.11.56",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "date-fns": "2.29.2",
@@ -12,7 +12,7 @@
     "gatsby-plugin-react-helmet": "5.21.0",
     "gatsby-plugin-typescript": "3.14.0",
     "gatsby-source-rss-feed": "1.2.2",
-    "jquery": "3.6.0",
+    "jquery": "3.6.1",
     "prettier": "2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
