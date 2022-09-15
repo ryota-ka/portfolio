@@ -2,10 +2,10 @@
   "private": true,
   "devDependencies": {
     "@types/jquery": "3.5.14",
-    "@types/node": "16.11.57",
-    "@types/react": "18.0.18",
+    "@types/node": "16.11.59",
+    "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
-    "date-fns": "2.29.2",
+    "date-fns": "2.29.3",
     "gatsby": "3.14.6",
     "gatsby-plugin-google-analytics": "3.14.0",
     "gatsby-plugin-graphql-codegen": "2.7.3",
@@ -17,7 +17,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
-    "typescript": "4.8.2"
+    "typescript": "4.8.3"
   },
   "dependencies": {
     "gatsby-source-graphql": "3.14.0"
