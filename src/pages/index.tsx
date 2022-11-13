@@ -41,7 +41,7 @@ export default ({ data }: Props) => (
           <dt>
             <i className="fas fa-fw fa-map-pin"></i> lives in
           </dt>
-          <dd>Nakagyo, Kyoto, Japan</dd>
+          <dd>Shinagawa, Tokyo, Japan</dd>
           <dt>
             <i className="fas fa-fw fa-building"></i> works for
           </dt>
