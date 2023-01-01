@@ -8,7 +8,7 @@
     "date-fns": "2.29.3",
     "gatsby": "4.25.1",
     "gatsby-plugin-google-analytics": "4.25.0",
-    "gatsby-plugin-graphql-codegen": "2.7.3",
+    "gatsby-plugin-graphql-codegen": "3.1.1",
     "gatsby-plugin-react-helmet": "6.3.0",
     "gatsby-plugin-typescript": "4.25.0",
     "gatsby-source-rss-feed": "1.2.2",
