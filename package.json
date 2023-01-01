@@ -17,7 +17,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
-    "typescript": "4.8.4"
+    "typescript": "4.9.4"
   },
   "dependencies": {
     "gatsby-source-graphql": "4.25.0"
