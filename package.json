@@ -13,7 +13,7 @@
     "gatsby-plugin-typescript": "5.3.1",
     "gatsby-source-rss-feed": "1.2.2",
     "jquery": "3.6.3",
-    "prettier": "2.8.2",
+    "prettier": "2.8.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
