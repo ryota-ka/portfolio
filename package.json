@@ -3,8 +3,8 @@
   "devDependencies": {
     "@types/jquery": "3.5.29",
     "@types/node": "20.12.7",
-    "@types/react": "18.2.75",
-    "@types/react-dom": "18.2.24",
+    "@types/react": "18.2.76",
+    "@types/react-dom": "18.2.25",
     "date-fns": "2.30.0",
     "gatsby": "5.13.4",
     "gatsby-plugin-google-analytics": "5.13.1",
