@@ -6,7 +6,7 @@
     "@types/react": "18.3.2",
     "@types/react-dom": "18.3.0",
     "date-fns": "2.30.0",
-    "gatsby": "5.13.4",
+    "gatsby": "5.13.5",
     "gatsby-plugin-google-analytics": "5.13.1",
     "gatsby-plugin-graphql-codegen": "3.1.1",
     "gatsby-plugin-react-helmet": "6.13.1",
