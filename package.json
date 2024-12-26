@@ -3,7 +3,7 @@
   "devDependencies": {
     "@types/jquery": "3.5.32",
     "@types/node": "20.17.10",
-    "@types/react": "18.3.17",
+    "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "date-fns": "2.30.0",
     "gatsby": "5.14.0",
