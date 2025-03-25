@@ -6,7 +6,7 @@
     "@types/node": "20.17.10",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
-    "date-fns": "2.30.0",
+    "date-fns": "4.1.0",
     "gatsby": "5.14.1",
     "gatsby-plugin-google-analytics": "5.14.0",
     "gatsby-plugin-graphql-codegen": "3.1.1",
