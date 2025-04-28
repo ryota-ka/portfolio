@@ -117,8 +117,7 @@ main h3::before {
   content: '## ';
 }
 main section {
-  margin-bottom: 50px;
-  padding: 5px 0;
+  margin: 12px 0 24px;
 }
 main ul {
   padding-left: 0;
