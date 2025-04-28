@@ -21,7 +21,7 @@ export default ({ data }: Props) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="theme-color" content="#222222" />
-      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.0/css/all.css" />
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.7.2/css/all.css" />
       <link rel="stylesheet" href="./style.css" />
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300" />
       <title>Ryota Kameoka</title>
