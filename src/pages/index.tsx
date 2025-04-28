@@ -78,39 +78,15 @@ export default ({ data }: Props) => (
         <h2>links</h2>
         <ul>
           <li>
-            <i className="fab fa-fw fa-amazon"></i>
-            <a href="http://www.amazon.co.jp/registry/wishlist/NCRDLUWP5AR5" target="_blank" rel="noopener">
-              Amazon wishlist
-            </a>
-          </li>
-          <li>
             <i className="fab fa-fw fa-apple"></i>
             <a href="https://itunes.apple.com/profile/ryotakameoka" target="_blank" rel="noopener">
               Apple Music
             </a>
           </li>
           <li>
-            <i className="fab fa-fw fa-bitcoin"></i>
-            <a href="https://blockchain.info/address/13n9dyoCo8DMhSzqboUjaPfJnu3DHButj5" target="_blank" rel="noopener">
-              bitcoin
-            </a>
-          </li>
-          <li>
             <i className="fas fa-fw fa-envelope"></i>
             <a href="mailto:ok@ryota-ka.me" target="_blank" rel="noopener">
               E-mail
-            </a>
-          </li>
-          <li>
-            <i className="fab fa-fw fa-facebook"></i>
-            <a href="https://www.facebook.com/kameoka.ryota" target="_blank" rel="noopener">
-              Facebook
-            </a>
-          </li>
-          <li>
-            <i className="fab fa-fw fa-foursquare"></i>
-            <a href="https://foursquare.com/user/4420704" target="_blank" rel="noopener">
-              Foursquare
             </a>
           </li>
           <li>
@@ -155,70 +131,15 @@ export default ({ data }: Props) => (
             </a>
           </li>
           <li>
-            <i className="fab fa-fw fa-lastfm"></i>
-            <a href="http://www.last.fm/user/ryotakameoka" target="_blank" rel="noopener">
-              Last.fm
-            </a>
-            <div id="lastfm-recent-tracks"></div>
-          </li>
-          <li>
-            <i className="fab fa-fw fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/ryota-ka/" target="_blank" rel="noopener">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <i className="fab fa-fw fa-reddit-alien"></i>
-            <a href="https://www.reddit.com/user/ryota-ka" target="_blank" rel="noopener">
-              Reddit
-            </a>
-          </li>
-          <li>
-            <i className="fas fa-fw fa-music"></i>
-            <a href="https://scrapbox.io/ryota-ka-music/" target="_blank" rel="noopener">
-              Scrapbox (ryota-ka-music)
-            </a>
-          </li>
-          <li>
-            <i className="fab fa-fw fa-snapchat-ghost"></i>
-            <a href="https://www.snapchat.com/add/ryota-ka" target="_blank" rel="noopener">
-              Snapchat
-            </a>
-          </li>
-          <li>
-            <i className="fab fa-fw fa-skype"></i>
-            <a href="skype:kameoka.ryota?userinfo" target="_blank" rel="noopener">
-              Skype
-            </a>
-          </li>
-          <li>
             <i className="fab fa-fw fa-strava"></i>
             <a href="https://www.strava.com/athletes/ryota-ka" target="_blank" rel="noopener">
               Strava
             </a>
           </li>
           <li>
-            <i className="fab fa-fw fa-twitter"></i>
-            <a href="https://twitter.com/ryotakameoka" target="_blank" rel="noopener">
-              Twitter
-            </a>
-          </li>
-          <li>
-            <i className="fas fa-fw fa-globe"></i>
-            <a href="https://www.wantedly.com/users/639008" target="_blank" rel="noopener">
-              Wantedly
-            </a>
-          </li>
-          <li>
-            <i className="fas fa-fw fa-square"></i>
-            <a href="https://www.justyo.co/KAMEOKA/" target="_blank" rel="noopener">
-              Yo
-            </a>
-          </li>
-          <li>
-            <i className="fab fa-fw fa-youtube"></i>
-            <a href="https://www.youtube.com/channel/UC7pkiEXXwH1PiR-2xnHNLmQ" target="_blank" rel="noopener">
-              YouTube
+            <i className="fab fa-fw fa-x-twitter"></i>
+            <a href="https://x.com/ryotakameoka" target="_blank" rel="noopener">
+              X
             </a>
           </li>
         </ul>
