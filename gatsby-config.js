@@ -33,5 +33,13 @@ module.exports = {
         fetchOptions: {},
       },
     },
+    {
+      resolve: 'gatsby-source-strava',
+      options: {
+        stravaClientId: process.env.STRAVA_CLIENT_ID,
+        stravaClientSecret: process.env.STRAVA_CLIENT_SECRET,
+        stravaToken: process.env.STRAVA_TOKEN,
+      },
+    },
   ],
 };
