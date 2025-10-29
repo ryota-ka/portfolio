@@ -38,7 +38,7 @@ export function BlogPost({ title, url, publishedAt }: Props): React.ReactElement
         <Label color="gray" icon="calendar">
           {date}
         </Label>
-        {bookmarks !== null && (
+        {bookmarks !== null && bookmarks > 0 && (
           <Label color="red" icon="bookmark">
             {bookmarks}
           </Label>
