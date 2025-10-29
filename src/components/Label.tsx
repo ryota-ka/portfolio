@@ -12,7 +12,7 @@ type Props = Readonly<{
 export function Label({ color, children, icon }: Props): React.ReactElement {
   return (
     <span className={styles[color]}>
-      {icon && <FontAwesome icon={icon} />}
+      {icon && <FontAwesome className={styles.icon} icon={icon} />}
       {children}
     </span>
   );
