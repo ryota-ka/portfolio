@@ -39,28 +39,20 @@ export default ({ data }: Props) => (
     <h1>Ryota Kameoka</h1>
     <main>
       <section id="profile">
-        <h2>profile</h2>
+        <h2>Profile</h2>
         <dl>
-          <dt>
-            <i className="fas fa-fw fa-birthday-cake"></i> born on
-          </dt>
+          <dt>Born on</dt>
           <dd>Jun 7, 1993 (age {age})</dd>
-          <dt>
-            <i className="fas fa-fw fa-map-pin"></i> lives in
-          </dt>
+          <dt>Lives in</dt>
           <dd>Shinagawa, Tokyo, Japan</dd>
-          <dt>
-            <i className="fas fa-fw fa-building"></i> works for
-          </dt>
+          <dt>Works for</dt>
           <dd>
             <a href="https://herp.co.jp/" target="_blank" rel="noopener">
               HERP, Inc.
             </a>{' '}
-            (Lead engineer)
+            (Engineer)
           </dd>
-          <dt>
-            <i className="fas fa-fw fa-graduation-cap"></i> educated at
-          </dt>
+          <dt>Educated at</dt>
           <dd>
             <a href="http://www.kyoto-u.ac.jp/" target="_blank" rel="noopener">
               Kyoto University
@@ -70,7 +62,7 @@ export default ({ data }: Props) => (
         </dl>
       </section>
       <section id="links">
-        <h2>links</h2>
+        <h2>Links</h2>
         <ul>
           <li>
             <i className="fab fa-fw fa-apple"></i>
