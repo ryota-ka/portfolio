@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Label } from './Label';
+import { LabelCollection } from './LabelCollection';
 
 const styles = require('./GitHubRepository.module.css');
 
@@ -19,14 +20,16 @@ export function GitHubRepository({ name, url, stars, primaryLanguage, descriptio
       <a href={url} target="_blank" rel="noopener">
         {name}
       </a>
-      {primaryLanguage && (
-        <Label icon="terminal" color="gray">
-          {primaryLanguage}
+      <LabelCollection className={styles.labels}>
+        {primaryLanguage && (
+          <Label icon="terminal" color="gray">
+            {primaryLanguage}
+          </Label>
+        )}
+        <Label icon="star" color="yellow">
+          {stars}
         </Label>
-      )}
-      <Label icon="star" color="yellow">
-        {stars}
-      </Label>
+      </LabelCollection>
       <div className={styles.description}>{description}</div>
     </li>
   );
