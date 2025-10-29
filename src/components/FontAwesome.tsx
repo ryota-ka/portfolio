@@ -1,5 +1,10 @@
 import * as React from 'react';
 
-export function FontAwesome({ icon }): React.ReactElement {
-  return <i className={`fa fa-fw fa-${icon}`} />;
-}
+type Props = {
+  className?: string | undefined;
+  icon: string;
+};
+
+export const FontAwesome: React.FC<Props> = ({ className, icon }) => {
+  return <i className={`fa fa-fw fa-${icon} ${className}`} />;
+};
