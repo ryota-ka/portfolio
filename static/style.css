@@ -128,6 +128,7 @@ main ul li {
 }
 main ul li::before {
   content: '- ';
+  color: var(--text-moderate);
 }
 main ul li ul {
   margin-left: 2rem;
