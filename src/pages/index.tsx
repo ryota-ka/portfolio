@@ -4,7 +4,14 @@ import { graphql } from 'gatsby';
 import { IndexQuery } from '../../types/graphql-types';
 
 import '../../static/style.css';
-import { GitHubRepository, GitHubRepositoryCollection, BlogPost, BlogPostCollection } from '../components';
+import {
+  GitHubRepository,
+  GitHubRepositoryCollection,
+  BlogPost,
+  BlogPostCollection,
+  StravaActivity,
+  StravaActivityCollection,
+} from '../components';
 import { differenceInYears, fromUnixTime } from 'date-fns/esm';
 
 type Props = {
@@ -123,6 +130,33 @@ export default ({ data }: Props) => (
             <a href="https://www.strava.com/athletes/ryota-ka" target="_blank" rel="noopener">
               Strava
             </a>
+            <StravaActivityCollection>
+              {data.strava.nodes
+                .filter(activity => {
+                  switch (activity.type) {
+                    case 'Ride':
+                    case 'VirtualRide':
+                      return (activity.distance ?? 0) >= 20_000 || (activity.elevation ?? 0) >= 200;
+                    case 'Walk':
+                      return (activity.distance ?? 0) >= 10_000;
+                    default:
+                      return true;
+                  }
+                })
+                .slice(0, 5)
+                .map(activity => (
+                  <StravaActivity
+                    distance={activity.distance ?? null}
+                    elevation={activity.elevation ?? null}
+                    id={activity.id}
+                    key={activity.id}
+                    kudos={activity.kudos ?? 0}
+                    name={activity.name ?? ''}
+                    time={activity.time ?? 0}
+                    type={activity.type ?? 'Workout'}
+                  />
+                ))}
+            </StravaActivityCollection>
           </li>
           <li>
             <i className="fab fa-fw fa-x-twitter"></i>
@@ -166,6 +200,18 @@ export const query = graphql`
             }
           }
         }
+      }
+    }
+
+    strava: allStravaActivity(sort: { start_date: DESC }, limit: 20) {
+      nodes {
+        elevation: total_elevation_gain
+        distance
+        id
+        kudos: kudos_count
+        name
+        time: moving_time
+        type: sport_type
       }
     }
   }
