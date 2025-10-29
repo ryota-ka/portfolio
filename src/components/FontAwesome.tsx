@@ -6,5 +6,5 @@ type Props = {
 };
 
 export const FontAwesome: React.FC<Props> = ({ className, icon }) => {
-  return <i className={`fa fa-fw fa-${icon} ${className}`} />;
+  return <i className={`fa fa-${icon} ${className}`} />;
 };
