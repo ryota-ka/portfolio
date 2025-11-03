@@ -1,11 +1,11 @@
-name: weekly
+name: Nightly
 
 on:
   schedule:
-    - cron: '0 15 * * 0'
+    - cron: '0 15 * * *'
 
 env:
-  URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
+  URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
 
 jobs:
   build-hook:
