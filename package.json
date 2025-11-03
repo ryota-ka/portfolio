@@ -2,7 +2,7 @@
   "private": true,
   "devDependencies": {
     "@ardatan/aggregate-error": "^0.0.6",
-    "@types/jquery": "3.5.32",
+    "@types/jquery": "3.5.33",
     "@types/node": "20.17.10",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
